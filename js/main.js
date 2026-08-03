@@ -185,7 +185,12 @@
             blocks.forEach(function(current) {
 
                 const viewportHeight = window.innerHeight;
-                const triggerTop = (current.offsetTop + (viewportHeight * .2)) - viewportHeight;
+                // offsetTop is relative to the nearest positioned ancestor, which
+                // breaks the moment a parent section becomes position:relative
+                // (e.g. to host its own decorative elements) — use the
+                // document-relative top instead so this keeps working regardless.
+                const documentTop = current.getBoundingClientRect().top + scrollY;
+                const triggerTop = (documentTop + (viewportHeight * .2)) - viewportHeight;
                 const blockHeight = current.offsetHeight;
                 const blockSpace = triggerTop + blockHeight;
                 const inView = scrollY > triggerTop && scrollY <= blockSpace;
@@ -267,6 +272,19 @@
                 }
             )
             modals.push(instance);
+        });
+
+        // "projet suivant" : câblé sur chaque instance, car le contenu de la
+        // modal est détaché du document tant qu'elle n'a jamais été ouverte
+        // (document.querySelectorAll ne le trouverait pas)
+        modals.forEach(function(instance, index) {
+            const nextLink = instance.element().querySelector('.modal-popup__next');
+            if (!nextLink) return;
+            nextLink.addEventListener('click', function(event) {
+                event.preventDefault();
+                instance.close();
+                modals[(index + 1) % modals.length].show();
+            });
         });
 
         folioLinks.forEach(function(link, index) {

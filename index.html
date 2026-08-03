@@ -1,17 +1,22 @@
 <!DOCTYPE html>
-<html class="no-js ss-preload" lang="en">
+<html class="no-js ss-preload" lang="fr">
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Allan | portfolio</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Allan Abatuci | Développeur full stack</title>
+    <meta name="description" content="Portfolio d'Allan Abatuci, développeur full stack passionné par le hardware et le software. Projets, expériences et contact.">
+    <meta name="author" content="Allan Abatuci">
 
     <!-- mobile specific metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- security
+    ================================================== -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- CSS
     ================================================== -->
@@ -30,6 +35,90 @@
 <body id="top">
 
 
+    <!-- # ambient background art (fixed, low opacity)
+    ================================================== -->
+    <pre class="ascii-bg" aria-hidden="true">⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠄⠠⠀⢄⠠⡐⣤⡶⢏⠋⡔⡀⠂⠄⡐⠠⠐⠠⠀⠄⡐⠠⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠠⠐⠀⠈⠀⠠⠈⠠⢁⢆⡷⠛⣁⠒⡈⠐⠠⢀⠑⡀⢂⠡⠈⠄⡁⠂⠄⠡⠀⡀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠄⠂⠁⢠⣑⠎⠩⢀⠡⠀⡐⠀⠁⢂⠀⠂⡐⠠⠀⢁⠂⠄⠡⠈⠄⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⡀⢤⡘⠆⠁⠀⠁⡀⠀⠄⠀⡀⠁⢀⠀⠂⠀⠄⠂⢀⠂⡈⠄⠁⢂⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⡐⢀⡡⠔⠂⠀⠀⠀⠈⠀⠀⢀⠀⠄⠀⠐⠀⠠⠈⠐⡀⢈⠠⠐⠀⠄⢁⠠⠀⠂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⢀⡀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠁⠈⠀⠀⠀⠀⠀⠈⠀⠀⠁⠈⠈⠁⠈⠁⠉⠀
+⠀⠀⠀⠀⠀⠀⠀⠐⣠⠎⠁⠀⠀⠀⠀⠀⠠⠐⠀⠀⠀⠀⠐⠀⢈⠀⠄⢁⠠⠀⠄⢈⠐⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠠⠄⠐⠂⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⡤⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⡀⠈⠀⠠⠈⠀⠄⡈⠠⠀⠀⠄⠂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣾⣯⠀⠀⠀⠀⠀⠀⠀⠀⠸⣦⡀⠀⠀⢀⠀⠄⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⡀⠁⢀⠂⢁⠠⠀⠐⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⣀⠤⢿⣷⡌⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠠⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⠀⠐⠀⡀⠂⢀⠐⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣿⣿⣿⡇⣀⠀⠄⠐⠀⠈⠀⠀⠀⢸⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠄⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠈⠀⠄⢀⠐⠀⡀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢄⢠⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠌⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠀⠠⠀⠂⠀⠄⠁⠀⠀⠀⠀⠀⢀⠠⠀⠂⠀⠐⠀⡀⠄⠀⠄⢠⣐⡤⠛⡌⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠀⡀⠄⠠⠁⡈⠠⠐⠀⠀⡀⠁⠠⠀⡀⠄⠐⡈⢀⢂⠰⣈⠶⢚⡁⠂⠄⡑⣸⣿⣿⣿⣿⣿⣏⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣸⣿⣿⣿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⡐⠀⠀⠄⠂⡐⠀⠡⠀⠐⠀⡀⠄⠁⠠⢀⢂⡅⢆⠧⢎⠣⢉⠂⠡⢀⠁⠢⢠⣿⣿⣿⣿⣿⣿⡷⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢸⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠐⠈⠀⠄⠁⠀⠄⠁⡀⠂⡀⢁⠂⠁⠄⠂⠠⢐⣈⡶⠝⡊⠜⡈⢂⠌⡐⠠⢈⡐⠠⣈⠁⣼⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⢸⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠐⠀⠀⠄⠂⢀⠂⠈⠄⢂⠐⠠⠐⡀⢂⠈⡐⣠⡱⢞⡉⢂⠐⠠⠐⣀⠒⡀⢢⠐⡡⢂⡌⡡⠤⢡⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠁⠀⠄⠂⠁⠠⠈⡀⠄⠡⠈⡄⢨⠐⡡⠐⣤⣮⠗⠣⠑⠠⢀⠂⢌⢂⠱⣀⠢⢁⠆⡱⢀⠧⢰⢡⠋⣼⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣿⣿⣿⣿⣿⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠈⠄⠡⢀⠃⡜⡴⢻⠋⡔⠨⢁⠌⡰⠀⢎⠰⣈⠒⠤⡑⢌⠢⡑⣌⠲⢡⠢⢉⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⣰⡬⠛⡘⠠⢁⠂⠔⠡⠌⡐⠠⠉⠄⠃⠤⡉⢆⠱⡌⢶⡱⢢⡑⢣⡑⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢠⡼⠞⠡⢂⠑⠠⠁⠄⠂⡈⠄⣁⠂⠡⠈⠄⡉⠰⡈⢆⠓⡜⢣⠝⡢⢱⢡⠎⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢀⣆⠶⠋⠀⠠⠁⠠⠈⠄⠡⢈⠐⠠⠌⠠⠌⡠⢁⠂⡌⣁⠒⠌⡜⢬⠡⢎⡱⢡⠎⢆⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡀⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⣄
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣐⣤⠾⠉⢀⠀⠄⠂⠐⡀⢂⠐⠠⡈⠔⢂⡐⢂⠄⢣⠘⠤⢡⣉⠒⣄⠳⡌⠲⣌⠣⢎⠴⡨⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠤⠤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣴⠟⡁⠂⠁⠀⠀⠠⠈⠐⡀⠂⠌⡐⠰⢈⠂⡜⢠⠊⠤⡉⠆⣅⠢⢍⠤⠓⣌⠳⢌⠳⣘⠦⡱⢹⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⣸⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠐⠀⠀⠀⠀⡔⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡴⠛⠁⠀⠀⠀⠀⠀⠀⠁⡀⠡⢀⠁⠂⠌⠄⣁⠊⡐⢂⡉⢆⠡⢋⠤⠓⣌⠒⡍⢦⡙⡬⢣⡙⣆⢳⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣦⣀⣠⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⢀⠀⠀⠀⠀⠂⠐⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠀⠐⠠⠈⠄⡁⠊⠄⢂⡑⠢⡐⢌⢢⢁⠎⡱⢌⡚⡜⢢⢳⡱⢣⡝⡢⢧⡘⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⢀⠔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢈⠀⠌⠐⣀⣣⠌⡐⢄⠣⢘⠰⢮⡎⣒⠱⣊⠴⡩⢇⢧⡙⢧⡚⣕⢣⠆⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⢀⠔⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⠈⠐⠠⢀⠂⠌⢢⡑⠌⣜⡸⡔⣡⠓⡬⢒⡹⢎⠶⣙⠧⡽⣌⢳⡚⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀⠀⠀⠀⠀⢂⠀⠀⠀⠀⠀⠀⠀⠀⣀⣀⣤⣤⣴⠶⠶⠷⠛⠛⠉⠉⠉⠀⠁⠀⠀⠀⠈⠀⠁⠈⠁⠉⠉⠚⠒⠶
+⠀⠀⠀⢀⠔⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⢁⠂⡐⠨⢐⠡⢎⠸⣾⢷⡑⢦⡙⢆⡣⢝⢮⡹⢭⣛⢶⡩⡞⣭⢃⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡇⠀⠀⠀⠀⠀⠀⠂⢀⠀⣀⣤⣤⡶⠾⠛⢋⣉⣁⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⣤⣄⠀⠀
+⠀⠀⡐⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠄⢂⠡⡘⢤⢋⠦⣑⠮⣝⡇⡲⢩⠖⡱⣊⢶⡹⣇⢯⡞⣱⡝⡶⣋⢼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣟⣿⣻⣿⣿⣿⣿⣿⠃⠀⠀⠀⡀⢄⣠⡵⠶⠛⠉⠁⠀⠀⠀⠠⢿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠈⠀⠀
+⡀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⡈⠄⠣⡜⣢⡝⡖⢨⡷⣹⣇⡱⢫⡜⡱⣘⢮⡵⣫⢞⣭⡓⣾⡱⣏⢆⢿⣿⣿⡿⠋⠙⠛⢿⣿⣿⣻⢯⡿⣽⣳⣟⣯⢷⣟⣷⣿⣿⣿⡏⠀⢀⠐⡠⠚⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠆⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠐⡈⠱⠘⠥⢛⡧⢹⣷⣻⡦⣙⢧⣾⡱⣜⢮⡳⣝⣞⢮⡳⢧⣻⢼⣩⠎⣿⣿⡇⠀⠀⠀⠀⠻⣯⣟⡿⣽⣳⣟⡾⣽⣻⠚⠉⠙⣿⡟⠀⡀⢂⠐⡀⠐⡈⠐⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⢀⠀⡀⢀⣀⣀⣀⣀⡀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠄⠠⠐⣀⠢⢀⡔⠠⠉⡙⠃⠀⠤⡐⢄⠢⣉⠙⠾⣭⡟⡵⣏⣷⢏⣮⣛⡜⢿⣧⠀⠀⠀⠀⠀⢹⣯⣟⣷⣻⢞⣽⠓⠁⠀⠀⢸⡟⢀⠐⡀⢂⠐⠠⠁⠤⢁⠄⠠⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠈⠄⢂⠐⡀⠀⠀⠀⠉⠉⠙⠛⠳⢦⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠂⠄⡈⠄⠡⢀⠂⠤⠘⣀⠣⢐⠡⢃⠔⡈⠢⡑⠤⢋⡔⠱⣿⣿⣼⢣⡟⡶⣭⢞⡌⢿⣆⠀⠀⠀⠀⠈⣷⣻⠾⣝⣻⠎⠀⠀⠀⣠⠟⠀⡄⠂⠔⣀⠊⠤⢉⠰⠈⡌⡐⢂⠄⠠⠀⠐⡠⠀⢀⠀⠠⢈⠀⠈⢂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠳⢦⡀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⢈⠀⠄⡈⠄⠡⠈⠄⠃⡄⢢⠁⢎⠰⣈⠒⡡⠌⢒⠡⣊⠵⡙⢿⣞⣯⣝⣳⡝⠎⣁⠂⠻⣦⡀⠀⠀⢀⣯⢳⡟⣭⠇⠀⠀⢀⡴⠋⢠⠡⠠⢉⠰⠀⡌⢂⠌⡰⠁⢆⠱⡀⢎⠢⡁⠆⠐⡡⢂⠌⠐⠀⡈⠄⠀⠁⢂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣦⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠁⡀⠂⢈⠀⠄⡈⠄⠡⢈⠐⠄⡂⢩⠐⠢⢄⡙⠤⡙⡄⢣⠈⡖⠱⡈⣾⡾⣽⢾⣽⡐⠄⣂⠀⠈⠙⠦⢤⡼⣜⢧⡻⣜⣧⡠⠖⠉⠤⠑⠂⡄⠃⢌⠠⢃⠐⡈⠰⢀⠩⠄⢣⠘⡄⢣⠐⡈⠄⡐⢡⠀⠂⠀⠄⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⣧⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⢀⠠⠐⠀⡀⠂⠄⠈⡐⠠⢈⠐⡈⢄⢊⡑⢢⠘⡰⠡⠜⠢⡅⡌⢣⡑⡘⢿⣿⣿⣿⣿⣷⣤⠈⠀⠀⠀⠀⠈⠉⠉⠉⠉⠁⠀⢀⠈⠆⠡⡁⠤⢉⠀⠢⠐⡈⠤⠑⡈⠤⢉⠆⡩⢔⠢⡑⣌⡒⠄⡀⠁⢂⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠠⠀⠂⠌⠄⢣⠐⡩⢘⠱⢌⠒⣡⠐⡡⢂⠙⠛⠿⠿⢿⠻⠿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡐⢂⠩⡐⠥⠐⡀⠂⠌⠠⢁⠰⢀⠡⠒⡈⢆⡘⠤⡉⢖⡡⢄⠳⡈⠄⠠⠀⠐⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠐⠈⠄⡉⠌⠡⠐⡉⡐⠂⡅⠢⢌⠠⠌⣀⠡⠈⠄⠡⢀⠑⠠⠁⠌⡐⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢡⠊⡐⢀⢂⠡⢀⠡⠌⡐⠈⠆⢂⠡⠂⢅⠢⠘⠤⡑⢢⠜⢢⡑⠌⠂⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡀⠀⠀⠀⠀⠀⠀⠀⢸⡇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⠀⠡⠐⠠⠐⠠⢁⠐⠠⠃⢌⠡⢂⡱⢈⠔⢢⠑⡌⠤⡀⠄⠂⡀⢀⠀⢀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⢂⡁⢢⠀⠆⢂⡐⢢⠀⠍⡰⠈⠤⣉⠰⣈⠑⡢⢁⠣⡘⠤⡘⢌⠡⠄⠂⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⣿⡇⠀⠀⠀⠀⠀⠀⠀⣺⠇⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠀⠂⠡⢈⠐⠂⠌⠡⠘⡠⠘⢄⠢⢉⠜⠠⢃⠘⡀⠆⢁⠂⠐⠠⠈⠀⠄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⡄⠣⢌⡐⢨⠐⡌⠒⠤⣉⠒⡄⢣⠄⣋⠔⡉⢆⡑⢢⠱⡈⢆⡩⠘⡄⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠰⠋⠀⠀⠀⠀⠀⠀⠀⢢⡟⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠠⢈⠐⡈⠔⠡⣀⠃⢄⠊⠤⠘⡀⠆⡐⠠⠈⠄⡠⠁⠄⡀⠁⠀⡀⠀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠑⢢⠘⡄⠣⢌⡃⠓⠈⠁⡈⢀⠁⡈⠲⢉⠦⣘⠡⡒⣉⠲⣐⠩⡐⢄⠒⡄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⣀⡽⢃⣰⡀⠥
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⢂⠐⡈⠐⢠⠈⠄⠊⢄⠡⠐⡐⠠⢁⠁⢂⠐⠈⠀⠀⢀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⢀⠀⠀⠀⠀⠀⠀⠀⠡⢀⠀⡐⠠⢁⠐⡀⢂⠐⠠⢀⠑⠬⣑⠢⣁⠣⢄⠣⡘⢄⠣⡐⢡⠂⠄⠠⢀⠀⠀⠀⠐⠠⡀⠄⢂⠄⡒⣸⠣⣿⣿⡛⣞
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠀⠀⠀⠀⠈⠀⠄⠂⠄⡁⠂⠌⡈⣁⠂⠤⠁⠄⠡⠀⡈⠀⠠⠐⠈⠀⠀⠀⡀⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠂⠄⠀⠀⠈⠐⠠⠁⡀⠐⠀⠁⠂⡐⠀⠂⠌⠐⡀⠂⠘⡄⡓⠤⢃⡌⢢⠑⡌⢆⡑⠢⢉⠰⠡⣀⠐⢌⠢⣀⠀⠀⠉⢦⡘⣵⣏⡱⢲⣜⣻⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠌⡐⠀⡐⠀⡐⠠⢈⠀⠌⠐⠀⡁⠀⠄⠁⡀⠄⠀⠐⠀⢀⠠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⡈⠐⠠⠀⠈⠀⠡⢀⠁⠂⠌⡀⠄⡈⠠⢀⠁⡀⠂⢀⠀⠡⢈⠁⡘⢄⠣⡘⠤⡘⠠⠁⠂⠁⠆⡉⠤⠐⠠⣛⠶⣤⣀⣿⣿⣦⣛⣷⢺⣳⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠂⠠⢁⠀⠄⠠⠐⠀⢈⠀⠂⠁⢀⠀⠂⢀⠀⠀⠌⡀⠌⢀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠄⠡⢁⡘⠀⠆⣀⠀⠈⠐⠠⠐⣀⠂⣁⠢⠐⠠⢁⠂⠌⠄⡁⠂⠄⡀⠐⣡⠶⢒⢊⡙⠙⠂⠡⠐⠠⢁⠀⠈⠳⣷⣿⣿⣿⣿⢿⣞⡯⣽⣿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠁⠀⠄⠂⠐⢀⠈⠀⡀⠂⠁⢀⠀⠂⡀⠄⡁⢂⠐⡈⠄⠠⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠄⠠⢁⠒⠠⢈⠂⣁⠂⠄⡀⠂⠄⢂⠡⢁⠂⠌⡐⠈⠄⡁⢂⠐⠀⠁⠀⠀⠀⠠⠄⠀⠀⠀⢀⠂⣌⣰⣽⣿⠿⣿⣿⣻⡞⣽⣺⣿⡿
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⢀⠀⠀⠀⠀⠀⠄⠀⠠⠁⠀⡐⠈⠀⠀⠂⠀⡀⠂⠄⠂⠁⠀⠀⠀⠀⠀⠀⠈⠐⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠌⠠⢁⠂⠄⠌⡐⠠⠁⠌⠀⢂⠐⡈⠐⠠⢁⠂⡐⠠⠈⠄⠠⠤⡲⠍⠂⠀⠀⠀⡐⢠⢃⣾⣿⡿⢯⡻⡜⣧⢳⡽⡲⣝⢲⣙
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠈⠀⠀⢀⠀⠀⠄⢂⡤⠒⠀⠀⠁⠀⠄⠂⠁⠠⠁⠀⠀⠠⠀⣀⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠀⠌⠐⡈⠄⠡⠘⠠⠁⠄⠐⠠⢉⠐⡀⢂⠄⠡⠈⠄⠀⠀⠀⠀⠀⠀⢀⠂⡜⣴⣿⣿⢏⡳⢣⢳⡙⢦⣛⣼⡷⣊⠗⡬
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠀⢀⠂⣄⠗⠊⠅⡀⠠⠐⢠⠂⢤⣀⣀⣀⢀⣀⣀⣬⡴⣟⢧⠻⣤⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠂⠁⠠⠈⢂⠁⠆⢉⠐⠠⠀⠀⠂⡐⠠⠈⠄⠡⠀⠀⠀⢀⠀⡄⢌⢢⣙⣾⣿⠿⡑⠮⣑⠣⢆⡙⠦⡘⣬⣷⣿⣿⡖
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠐⣀⣢⠖⠋⠠⢈⠐⢠⠀⢡⠘⠤⡉⢖⡰⠜⣌⠯⣜⢳⣎⢷⡹⣎⠷⣜⡧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠠⠈⠐⠠⠈⠄⡁⠀⠐⠀⡀⠁⠐⠀⠠⢐⠨⢄⢊⡔⣪⣾⣿⡿⢍⠒⡡⢃⠆⡓⢌⡒⠥⣳⣿⣿⢟⠳⣸
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠄⠀⠀⠀⠀⠀⠀⠀⠀⡀⠄⢂⣡⠖⢋⠠⠐⡈⢐⠠⢈⠄⢾⡀⠎⡰⢑⠢⢌⠓⣌⠚⣌⠳⢬⢳⡹⣜⡻⣜⡇⠀⠀⡴⣶⡴⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠁⠀⠁⠀⠀⠀⠀⠀⠀⠀⠁⣠⠣⢌⠲⢌⢲⣼⣿⡿⢋⠔⡈⢆⠱⡈⢆⡉⢦⢘⡱⣿⣿⢋⡌⢣⣽
+⠀⢀⠀⠀⠀⠀⠀⢀⣀⡀⠀⠀⢀⠀⠠⢀⠂⡈⢄⣰⡜⢋⡐⠈⡄⢂⠡⡐⠌⡐⢢⠘⠤⡘⠤⡑⠬⡘⡌⢎⡰⠩⡔⣩⢒⣣⢓⡮⢳⣝⠂⠀⢠⠳⡍⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠐⠀⡔⡡⢍⡊⡕⣮⣿⡿⢋⠔⡡⠊⡔⡈⢆⡑⢢⢉⠆⢎⠼⡿⢏⠲⣌⠓⣾
+⠀⠂⡀⠐⠀⡀⢲⣿⠟⠁⠄⠡⢀⠂⡡⢀⢢⡴⠞⠡⠐⡂⢄⠣⡐⢡⢂⠱⡈⡔⣣⠎⣆⠱⡘⣌⠱⡱⡘⢦⡑⣣⠜⣤⠳⣌⡳⣜⡳⡞⠀⠀⣾⣻⣇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠤⡙⢄⠃⢦⣱⣿⡿⢋⠔⡡⢊⡐⣡⣶⡁⠦⣘⠢⢅⡚⣌⠲⣑⢪⠱⣌⡻⣜
+⠠⢁⠐⠠⠁⠄⢂⠠⢀⠡⡈⠔⠠⢛⣰⡽⢊⠔⡁⢣⠑⡌⢢⠑⡌⢢⠜⡄⡓⢌⠥⠓⡤⢣⠱⡌⡱⢡⡙⢦⡑⣣⠞⡴⣋⢶⡹⢎⡷⠁⠀⣸⢳⣛⠾⠀⠀⠀⠀⠀⠀⠀⣀⣄⠀⠀⠀⠀⠀⠀⠀⠀⢀⠠⢄⠢⣁⢆⡉⠦⢤⡀⡐⠀⠀⠀⢀⠠⡄⠢⠁⠆⡁⢊⣼⣿⠟⡩⢐⠡⢊⠐⢢⠐⣽⠓⣌⠒⡡⢎⢢⡑⢢⣱⣌⣖⡻⣜⣳⣯
+⠐⠂⡌⡐⠡⡈⢄⠢⢁⠒⠤⣉⢶⠟⡡⢂⠅⡊⠔⡡⢊⠔⡡⢊⡔⢣⡘⡔⡩⢜⡨⢓⠬⡡⢓⡌⡱⢃⡜⢢⠱⣡⠞⣡⠝⢂⣩⣴⠘⠀⠰⠍⠃⠁⠀⠂⠀⠀⠀⠀⠀⡹⢧⢞⠀⠀⠀⠀⠀⡰⢎⡱⣍⡚⣬⠱⣌⠦⡙⡜⢢⠐⠡⠉⠌⠡⢈⠁⢂⠡⢈⠐⣬⠾⢋⡐⠌⡐⠌⡄⠣⡘⠤⡉⢤⣿⠖⡩⢔⠪⡔⣼⣿⣿⣿⣯⣿⣿⣿⣿
+⡈⠥⡐⠌⡡⠐⡌⢢⢁⡚⣴⡟⢍⠢⡑⢌⠢⡑⠌⡔⢡⠚⡰⢡⠜⢢⠔⣡⠓⡢⢅⡋⠴⢡⠣⢜⡡⢎⢌⢣⠓⢄⣩⣴⣾⣿⣿⢋⠀⠀⠀⢀⣂⢬⡖⢯⡀⠀⠀⠀⠀⢹⡝⡾⠀⠀⠀⠀⢀⡽⣎⢗⡮⡵⣎⢳⣘⣶⣿⠀⠂⠈⠀⠂⠄⡁⠂⡈⠄⢂⡤⠛⡁⠂⠔⠠⡘⢀⢎⣴⡗⢌⢢⢉⠖⡤⢋⡴⣩⢞⣹⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠰⣡⠘⡤⢡⠓⣌⢆⣧⣿⣏⣜⡢⠇⣍⠢⡑⡌⠜⡠⢃⠬⡑⠢⢎⡡⠚⣄⠣⣑⠢⣉⠲⣁⠳⠨⠔⢊⣨⣴⣾⢿⡛⢯⠙⠢⢁⠂⢀⡰⢎⡽⣘⠦⣏⡳⡅⠀⠀⠀⠀⢸⡝⡇⠀⠀⠀⠀⣸⢞⡼⣩⢞⡽⡟⣶⣿⠟⠁⡐⠀⠁⡐⠈⠀⠄⠡⡐⡜⠂⠄⠡⠠⠑⡈⠆⢡⠊⢞⡡⠜⣂⢇⣎⡞⣴⣫⢶⣽⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⣷⣶⣿⣼⣷⣿⣾⣿⠿⡛⡍⠦⣑⠩⡄⢓⡰⠘⡤⠑⡌⢢⠑⣉⠆⡒⠍⡄⠓⡄⠣⠄⠃⢄⣡⣴⣾⢿⡻⠹⠜⠂⢉⠠⢈⠐⣠⠀⡎⠴⣃⢮⢱⣋⠶⣙⡆⠀⠀⠀⠀⢸⡽⠀⠀⠀⠀⢸⡿⣎⠷⣭⢞⡼⡹⢌⠡⠐⠠⢀⠐⠠⠐⠠⢁⡌⠖⠡⡀⢡⠈⢆⠡⡑⠤⣉⢆⣙⣦⣜⡱⣎⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⠭⡙⣌⢣⣝⣾⡿⣉⠖⡱⠘⡴⢈⠱⡈⠅⢂⠓⡄⢋⠔⡡⢊⠔⡨⢐⠡⠌⣱⢀⣡⣴⣿⡿⡟⠯⠙⢂⠁⡁⠂⣌⠠⠴⠒⡉⣄⠚⢬⠱⡌⢖⡣⢎⡳⣍⢞⠀⠀⠀⠀⢸⡜⠀⠀⠀⠀⣾⡱⣏⡿⣜⡯⢞⡡⢆⠱⡈⢅⠢⡘⠤⣑⡜⢣⠈⡔⠡⡐⢢⠑⡌⢦⡑⢮⡔⣮⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿
+⢣⠕⣎⣶⣿⡛⠴⣨⣖⠡⢉⠐⡁⠂⠔⠈⠀⠣⠘⠠⠊⠄⠁⠂⠄⢁⣢⣴⣿⣿⠿⠛⡅⠃⡌⠄⣁⠦⠴⠒⡉⢄⠒⡤⢧⡑⢢⡙⢢⠓⡜⢎⣷⣏⠶⣩⣞⡀⠀⠀⠀⢸⠂⠀⠀⠀⣸⢧⡿⣝⡾⣝⢮⡳⣜⢮⡱⣩⢆⣳⡵⣟⠡⢎⠤⢣⢌⡱⣌⢧⣹⡼⣶⣽⣳⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢧
+⢡⢚⣼⡟⠡⢨⣿⡿⠏⠐⠀⠂⠀⠁⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⠿⢛⠩⢀⠂⣡⡤⠵⠒⠋⠁⡐⠠⠃⡜⢠⢃⠦⡑⢬⠱⣌⢣⡹⢌⡽⠸⣍⢞⡱⢮⡅⠀⠀⠀⠸⠀⠀⠀⢰⣯⣟⡾⣽⣛⡾⢧⣟⡼⣧⣿⣵⣿⡟⣽⣬⣿⣎⣟⣧⣟⣷⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣾⡰⣉⠧
+⣈⣾⠟⡁⠄⠾⠋⠁⠀⠐⠀⠀⠄⠀⠀⠀⠀⠀⢀⣠⣴⣾⣿⠿⢛⠩⠐⣈⣤⠼⠖⠋⠁⠀⢀⠀⢂⠡⢂⠂⡅⢊⠜⡤⢓⡌⢦⡙⣎⡱⣎⡵⢦⡹⣜⡳⢮⣕⠀⠀⠀⠀⠀⠀⢀⣾⣿⣽⢳⡯⣟⣳⢾⣽⣷⣿⣿⣿⣯⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⠛⢧⡩⢴
+⣾⠏⠀⠀⠀⡀⠀⠄⠂⠀⠀⠀⠀⠀⠀⣠⣴⣾⣿⠿⠛⡉⢄⣒⡤⠖⠋⠁⠀⠀⠀⡀⠐⢈⠠⠘⡠⢂⠄⡑⠨⢌⠒⡜⣰⠪⣕⠺⣔⢳⡻⣟⢧⡝⣮⣝⡳⣞⡀⠀⠀⠀⠀⢀⣾⣿⣳⢯⣟⣽⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣤⣟⠃
+⠏⡀⠈⠀⠄⠀⠠⠀⠀⠀⠀⣀⣴⣾⠿⠟⢋⢁⣂⡤⠗⠚⠉⠀⠀⠀⠀⠄⠐⠀⡁⠠⠈⠄⢂⠡⠐⡄⢊⠔⡱⠨⡜⡰⢡⠳⣎⡝⢮⡳⣝⢮⡳⣝⡶⣭⣗⣻⠆⠀⠀⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣿⣿⡟⢈⠐
+⠂⠄⡁⠄⠂⠈⠀⣀⣥⡾⠛⢋⢉⣠⠰⠜⠚⠉⠀⠀⠀⠀⡀⢀⠂⢈⠐⠠⢈⠐⠠⠁⠌⡐⠄⢢⠑⡈⠆⢾⣁⠳⣌⢱⢫⡕⢮⡝⣧⢻⡼⣳⣻⣼⣿⣿⣿⣯⡇⠀⠀⠀⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⡗⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣍⣢⠂
+⠐⠠⠐⣀⣤⡾⠛⢋⣁⡤⠜⠒⠉⠀⡀⠠⢀⠠⢀⠐⡤⠁⡀⢂⠈⠄⡈⠐⡠⠈⢄⢃⡘⠄⣊⠤⢣⡕⣩⠒⣌⠳⣌⢎⡳⡞⣧⢞⣵⣯⣷⣯⢷⣿⣿⣿⣿⣿⠁⢀⣤⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⡻⣿⣿⣞⣿⢻⣿⢻⣿⣿⣿⣿⣿⣿⣿⠞⡉⢀⡑
+⣨⡶⠟⣋⣡⠤⠓⠋⡀⢠⠐⡠⢁⠒⡠⢁⢂⡐⢀⢂⡐⠤⠐⡠⠌⡐⠠⢡⠀⡱⢀⠢⠐⡌⡰⢘⢢⡙⣤⢛⣬⢳⢮⣭⣳⡽⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣴⠿⠋⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⢿⣯⣿⣿⣽⣾⣷⣯⣟⣿⢏⣮⢻⣽⣿⣿⣿⣿⣿⡿⡟⢣⠌⡤⠁
+⡡⠶⠛⢁⡀⢆⡑⢢⠑⢢⡑⠤⢃⡜⢠⠃⠆⡌⢂⢆⣐⠢⢑⠠⠒⣈⠁⠆⡌⠰⣀⠆⡣⢔⣡⢋⡦⣝⢶⣫⣞⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡏⠀⠂⠀⣻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⢿⣿⡿⣯⣹⢭⣙⣳⣶⣼⡾⠿⠞⡮⣧⣿⣿⡿⣻⢱⢋⠱⠈⣞⠡⢀⠰
+⡐⢢⢑⠢⠜⡠⢎⡑⢎⠥⣸⣷⡧⣘⠥⣊⠵⣘⣾⣿⠟⣄⠣⣌⠱⡠⢍⠲⣌⢱⢢⡹⣔⣫⢖⣯⢾⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠅⡐⠀⡁⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⢿⣿⣾⣿⣿⣿⣷⣿⣻⡻⢟⣳⣶⡶⣞⣻⣉⣿⣾⣿⣟⠣⠐⢨⠀⠆⣙⠠⠄⡌⠠
+⣬⣷⣾⣷⣯⣔⢣⡜⣎⣮⣿⣟⣵⣭⣾⣷⣿⣿⣿⣯⣞⣤⢳⡌⢧⣓⣎⣳⣬⣧⡳⣝⣮⢷⣻⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢂⠤⡁⠐⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢻⣿⣿⣿⣻⢿⡽⣿⣹⣿⣿⣷⣿⣿⣿⣿⣯⣥⣯⣽⣯⣁⡶⢟⣫⢳⣿⣿⠛⡐⠠⠉⠙⢢⠈⠒⡀⢃⢀⠠⡀
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣿⣿⣾⣷⣿⣿⣷⣿⣿⣿⣿⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢣⢾⡁⠆⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣟⣿⣿⣿⡿⣿⢭⣷⡿⢯⣹⣿⣿⡟⣿⢟⠻⣛⢿⡿⢣⠩⢼⡿⢑⣪⣼⣿⡟⠄⠂⠀⡀⠌⠐⡀⠊⠔⡈⠆⠌⠤⢡
+⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣏⣾⡇⢘⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡽⣮⢻⣿⡹⣯⡿⣟⡘⢦⠞⣧⢻⡕⣻⠎⡱⢈⠦⣿⡟⢋⡟⣦⣿⣿⠿⢋⠍⡉⠑⠄⠐⡐⠢⢄⠀⢂⢠⡐⣌⡠⣁
+⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣯⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣇⣂⣼⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⢿⣿⣟⠻⡷⣹⡿⢳⣾⣭⣛⢦⢘⡿⢈⠝⣢⠙⡄⢫⡐⢈⣾⠟⡴⢣⣾⣿⡿⢯⡑⠂⡐⢠⠁⠈⠀⠀⠄⠀⠒⠈⠀⠁⡈⠡⠌
+⣿⣿⣷⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣿⡷⣿⠿⡿⣟⢿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣻⣯⣿⣿⡿⢛⡻⢶⡛⢌⠣⢜⡩⢿⣷⣮⢓⡈⠆⢡⠃⡔⠠⠑⣸⡏⣜⣼⣿⠟⡩⢟⡠⠂⠔⠩⠁⠀⡈⠆⠀⠂⠀⠀⠂⠀⠀⠀⢁⠣
+⣿⣿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡟⣯⣟⣯⣷⣽⣷⣽⣾⣿⣿⡿⣿⣿⡷⣻⣿⣿⢿⣹⣿⡞⣿⣾⣿⣿⢿⣟⣿⣿⡿⣿⣿⣿⢿⣿⣿⣿⣿⡿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⢟⡛⢯⠾⠿⠻⠟⠿⠿⡶⣌⠒⠄⢻⡼⣷⢈⠇⡀⠉⠔⡠⢁⣺⣷⠿⠛⣏⠄⡁⢊⠷⣈⠀⠡⢀⠆⢁⠂⡘⠀⠀⠀⡈⠀⠀⠀⠂⡐
+⢿⠯⣏⠿⣹⠛⡷⣹⠞⣿⣿⡿⣏⡷⢿⣵⣯⢲⠍⡻⠿⠿⢯⡭⠽⣭⡛⠿⡷⢾⡥⢿⠟⣏⢾⣵⡾⣿⡾⣷⢿⣏⣷⣿⣶⣷⣿⣿⣾⡻⣿⢿⣽⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⡱⣘⣢⡜⢠⢚⠤⠁⣌⣰⣄⠢⠙⣎⠨⠄⣻⡯⠄⣃⢤⣁⢂⣱⡾⠛⣅⠂⠁⢎⠰⢀⠂⠠⠑⠦⣀⠀⠠⠀⠂⠁⠂⠀⢀⠁⠀⢡⠀⠀⠀
+⠓⠔⢦⣓⠶⢍⠲⢧⣟⣛⠾⣿⡌⢧⢿⣿⣦⣏⣰⡁⠏⡜⢠⠘⣰⣠⣵⠿⢋⣦⡱⠎⣟⠻⢶⣮⣵⣛⣷⣱⣞⡯⢟⡿⣿⠿⣿⣶⣿⣿⣿⣿⣿⣿⣿⣿⡿⣿⣟⣻⡽⣿⣿⣿⣿⣿⣿⣏⠳⣱⡿⢉⡘⠣⣌⠶⠵⠭⠆⣼⠂⠅⣚⠄⠒⢸⢳⠈⠱⢢⣼⣿⠋⠔⠁⠈⢒⠀⠸⡐⢂⠈⠄⠐⠀⠁⠈⠐⠠⠀⠀⠀⠀⠀⠀⢀⠂⠄⠂⠁
+⠚⠷⠶⡌⢳⠨⡱⣦⡜⢫⢷⡐⢫⡙⣎⠙⠯⣍⠩⢙⠛⣠⣶⠾⢛⠉⠄⣊⠾⡋⠴⢉⢆⡉⡞⠛⠿⠷⣦⡵⣾⣾⣷⣮⣝⡪⢿⡯⢇⣻⣸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⣿⣿⡟⣬⢿⠟⡀⠆⢠⠇⢠⠒⣚⠰⣨⢇⢫⡀⠜⡠⢁⢺⠡⣬⣷⢟⠣⢈⠣⠀⠀⠀⡀⠆⡀⠁⢆⠀⠀⠠⠀⠂⠀⠀⠀⠀⡐⠀⠁⠀⠄⡃⠀⠀⠀⠀
+⢈⠐⠠⠘⠀⠥⢀⠉⢿⡀⢎⡱⢃⠧⡘⡌⢆⠈⢂⣃⣘⣉⣄⣘⣤⠞⠋⠍⡰⠁⡌⢈⠆⡘⠠⢉⠢⠁⢤⠩⡙⠛⠛⡎⢿⠿⢆⡝⣢⣿⣿⣿⣿⣿⣿⡿⡿⣿⣿⣿⣿⣿⣿⣿⡿⣿⡜⣱⡏⢒⠈⠄⢣⢈⠇⡜⣡⢶⡋⠐⠢⢅⠎⡁⢦⣽⡾⠛⠁⡀⠆⢀⣋⠀⠀⢠⠁⠐⢄⡀⠀⠨⡐⢠⠀⡀⢀⠂⡄⠃⠀⢀⠠⣈⠔⠀⠀⠀⠠⠁
+⠀⠌⠠⠁⢊⠙⠛⢾⢠⠃⠌⠰⡈⢆⠡⠈⠔⢠⠈⠙⠋⠛⢉⠣⢀⠂⢁⠂⠡⠈⠔⢈⠠⢑⡀⢂⠡⢈⠂⠡⢀⠡⢣⠌⡳⢉⠶⡐⣿⣿⡿⣻⡿⣽⠾⣿⣿⢿⡾⣿⡾⣟⢿⣿⣿⣕⣎⠱⡇⠌⡘⡤⢩⢈⡶⠛⡥⠎⡀⢡⡡⢋⣴⣿⠟⡹⠀⠁⠄⡀⠌⠀⢆⠀⠀⠆⠀⠀⠀⠂⠔⡀⠀⠁⠈⡀⠁⠀⠀⢀⠴⠀⠁⠀⠀⠀⠀⠀⠄⠀
+⠀⠌⠄⡁⠂⡈⠄⡀⠆⡘⠠⢁⠐⡠⢁⡊⡐⠂⠰⢀⡐⢠⢀⠂⣁⠴⠄⠚⠂⠑⠂⡀⠂⠄⡘⠠⢀⠂⠌⠐⡀⠆⣁⠲⠁⡎⢡⠘⢭⡿⡞⣿⣾⡗⣳⢂⠼⣛⠛⣋⠷⡘⠓⢎⣹⡽⢛⠧⠐⡈⠄⢣⣄⣋⣀⣍⣰⣤⠖⣫⣴⡿⢫⠁⠠⠁⢀⠀⠂⠀⠄⠡⠂⠀⠀⠜⡀⠀⠀⠀⠀⠈⠁⠁⠀⠀⣉⠨⢐⡉⠤⠰⠀⠦⠐⠄⠀⠀⠀⠀</pre>
+
+
     <!-- # preloader
     ================================================== -->
     <div id="preloader">
@@ -42,7 +131,7 @@
     ================================================== -->
     <div class="s-pagewrap">
 
-        <div class="circles">
+        <div class="circles" aria-hidden="true">
             <span></span>
             <span></span>
             <span></span>
@@ -56,14 +145,14 @@
         <header class="s-header">
 
             <div class="header-mobile">
-                <span class="mobile-home-link"><a href="index.html">Allan.</a></span>
+                <span class="mobile-home-link"><a href="index.html"><img src="images/icons/logo-mark.png" alt="Allan Abatuci" class="home-logo"></a></span>
                 <a class="mobile-menu-toggle" href="#0"><span>Menu</span></a>
             </div>
 
             <div class="row wide main-nav-wrap">
                 <nav class="column lg-12 main-nav">
                     <ul>
-                        <li><a href="index.html" class="home-link">Allan.</a></li>
+                        <li><a href="index.html" class="home-link"><img src="images/icons/logo-mark.png" alt="Allan Abatuci" class="home-logo"></a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
                         <li><a href="#about" class="smoothscroll">Moi</a></li>
                         <li><a href="#works" class="smoothscroll">Projets</a></li>
@@ -100,14 +189,14 @@
                     </div>
 
                     <ul class="intro-social">
-                        <li><a href="https://github.com/Allan-ABATUCI">Github</a></li>
-                        <li><a href="https://www.linkedin.com/in/allan-abatuci-202680258/">Linkedin</a></li>
+                        <li><a href="https://github.com/Allan-ABATUCI" rel="noopener noreferrer">Github</a></li>
+                        <li><a href="https://www.linkedin.com/in/allan-abatuci-202680258/" rel="noopener noreferrer">Linkedin</a></li>
                     </ul>
 
                 </div> <!-- end intro content -->
 
-                <a href="#about" class="intro-scrolldown smoothscroll">
-                    <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z"/></svg>
+                <a href="#about" class="intro-scrolldown smoothscroll" title="Encore un peu de courage.">
+                    <span aria-hidden="true">↓</span>
                 </a>
 
             </section> <!-- end s-intro -->
@@ -117,12 +206,20 @@
             ================================================== -->
             <section id="about" class="s-about target-section">
 
+                <div class="circles" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
                 <div class="row about-info wide" data-animate-block>
 
                     <div class="column lg-6 md-12 about-info__pic-block">
-                        <img src="images/" 
-                             alt="" class="about-info__pic" data-animate-el>
+                        <img src="images/about-photo.jpg"
+                             srcset="images/about-photo.jpg 1x, images/about-photo@2x.jpg 2x"
+                             alt="Portrait d'Allan Abatuci" class="about-info__pic" data-animate-el>
                     </div>
 
                     <div class="column lg-6 md-12">
@@ -132,7 +229,7 @@
                                 Moi
                             </h2>
                             <p class="attention-getter" data-animate-el>
-                                En poursuite du Bachelor Universitaire de Technologie informatique à l'IUT de Villetaneuse
+                                Diplômé du Bachelor Universitaire de Technologie (BUT) informatique à l'IUT de Villetaneuse
                                 (Université Sorbonne Paris-Nord). Passionné par la programmation, je cherche à comprendre le fonctionnement des
                                 technologies qui nous entourent.
                             </p>
@@ -156,6 +253,24 @@
 
                     </div>
                 </div> <!-- end about-expertise -->
+
+
+                <div class="row about-highlights" data-animate-block>
+                    <div class="column lg-12">
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Faits marquants
+                        </h2>
+
+                        <ul class="highlights-list" data-animate-el>
+                            <li><strong>5 marketplaces intégrées en production</strong> (eBay, Temu, Amazon, Cdiscount) — stage METM</li>
+                            <li><strong>Sécurité applicative durcie</strong> — CSP (Content Security Policy, jetons à usage unique générés à chaque requête), HSTS (HTTP Strict Transport Security) — projet Horizon</li>
+                            <li><strong>Observabilité Dockerisée</strong> — Grafana, Loki, Promtail — stage METM</li>
+                            <li><strong>3 projets en équipe de 5</strong> — clean code, design patterns (Factory, Builder, Façade, Repository)</li>
+                        </ul>
+
+                    </div>
+                </div> <!-- end about-highlights -->
 
 
                 <div class="row about-timelines" data-animate-block>
@@ -190,7 +305,7 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">Assocition Jean-Luc François</h3>
+                                    <h4 class="timeline__title">Association Jean-Luc François</h4>
                                     <h5 class="timeline__meta">Stage Développeur Web</h5>
                                     <p class="timeline__timeframe">Février 2025 - Mars 2025</p>
                                 </div>
@@ -241,7 +356,7 @@
                             <div class="timeline__block">
                                 <div class="timeline__bullet"></div>
                                 <div class="timeline__header">
-                                    <h4 class="timeline__title">IUT de Villetaneuse, Université Sorbonne Paris Nord</h3>
+                                    <h4 class="timeline__title">IUT de Villetaneuse, Université Sorbonne Paris Nord</h4>
                                     <h5 class="timeline__meta">BUT, Informatique (validation, conception)</h5>
                                     <p class="timeline__timeframe">Juin 2026</p>
                                 </div>
@@ -276,6 +391,14 @@
             ================================================== -->
             <section id="works" class="s-works target-section">
 
+                <div class="circles" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
 
                 <div class="row works-portfolio">
 
@@ -292,54 +415,12 @@
                         <ul class="folio-list row block-lg-one-half block-stack-on-1000">
 
                             <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/voronoi.png"
-                                             srcset="images/portfolio/voronoi.png 1x, images/portfolio/voronoi@2x.png 2x"  alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Application Python
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            QVoronoÏ
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/vapeur.jpg" 
-                                             srcset="images/portfolio/vapeur.jpg 1x" alt="">
-                                    </div>
-                                    
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Aplication mobile
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Vapeur
-                                        </div>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/icons/wip.png" 
+                                        <img src="images/icons/wip.png"
                                             alt="">
                                     </div>
-                                    
+
                                     <div class="folio-list__item-text">
                                         <div class="folio-list__item-cat">
                                             Web App
@@ -347,10 +428,61 @@
                                         <div class="folio-list__item-title">
                                             Horizon
                                         </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : détection de cycles de dépendances par parcours de graphe (BFS), sans librairie externe.
+                                        </p>
                                     </div>
                                 </a>
-                                <a class="folio-list__proj-link" href="#" title="project link">
-                                    <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.14645 3.14645C8.34171 2.95118 8.65829 2.95118 8.85355 3.14645L12.8536 7.14645C13.0488 7.34171 13.0488 7.65829 12.8536 7.85355L8.85355 11.8536C8.65829 12.0488 8.34171 12.0488 8.14645 11.8536C7.95118 11.6583 7.95118 11.3417 8.14645 11.1464L11.2929 8H2.5C2.22386 8 2 7.77614 2 7.5C2 7.22386 2.22386 7 2.5 7H11.2929L8.14645 3.85355C7.95118 3.65829 7.95118 3.34171 8.14645 3.14645Z" fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                                <a class="folio-list__proj-link" href="https://github.com/Allan-ABATUCI/Horizon" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
+                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-01">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/voronoi.png"
+                                             srcset="images/portfolio/voronoi.png 1x, images/portfolio/voronoi@2x.png 2x"  alt="">
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Application Python
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            QVoronoÏ
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : reconstruire un diagramme de Voronoï via la triangulation de Delaunay.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Yassafa/SAE_Voronoi_Q" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
+                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-02">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/portfolio/vapeur.jpg"
+                                             srcset="images/portfolio/vapeur.jpg 1x" alt="">
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Application mobile
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Vapeur
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : recommander des jeux par tags, 100% local, sans compte ni serveur.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
+                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
                                 </a>
                             </li> <!--end folio-list__item -->
 
@@ -361,111 +493,103 @@
                     -------------------------------------------- -->
                     <div id="modal-01" hidden>
                         <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-voronoi.png" alt="">
-                
+                            <img src="images/portfolio/gallery/g-voronoi.png"
+                                 alt="Interface QVoronoÏ affichant un diagramme de Voronoï calculé à partir d'un jeu de points.">
+                            <p class="modal-popup__caption">Chaque cellule est déduite des centres des cercles circonscrits obtenus par triangulation de Delaunay.</p>
+
                             <div class="modal-popup__desc">
                                 <h5>QVoronoÏ</h5>
-                                <p>En collaboration avec 4 collègues. Une application qui permet de déterminer un diagramme de Voronoï à partir
-                                d'une liste de points du plan, sa visualisation.</p>
-                                <p>On est passé par la triangulation de delaunay pour construire le diagramme par les centres des cercles circonscrits</p>
+                                <p class="modal-popup__intro">Projet académique SAE, en équipe de 5 (Allan ABATUCI, Enrike CHAMPION, Ruben DUBORD, Yassine ESSAFA, Yanis NAÏT-MAKHLOUF) — 3 phases, 63 commits.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Construire, à partir d'un simple CSV de points du plan, un diagramme de Voronoï correct et vérifiable, puis l'exporter en SVG.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Le diagramme est reconstruit via une triangulation de Delaunay : chaque cellule de Voronoï est déduite des centres des cercles circonscrits aux triangles obtenus. L'ensemble est couvert par une suite de tests Pytest et accompagné d'une documentation technique HTML.</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une application Python qui importe un jeu de points, calcule et affiche le diagramme, puis l'exporte en SVG — testée et documentée.</p>
+
                                 <ul class="modal-popup__cat">
                                     <li>Python</li>
+                                    <li>Delaunay</li>
                                     <li>Pytest</li>
                                 </ul>
+
+                                <a href="#modal-02" class="modal-popup__next">Projet suivant : Vapeur →</a>
                             </div>
-                
-                            <a href="https://github.com/Yassafa/SAE_Voronoi_Q" class="modal-popup__details">Lien du projet</a>
+
+                            <a href="https://github.com/Yassafa/SAE_Voronoi_Q" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien du projet</a>
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-02" hidden>
                         <div class="modal-popup">
-                        <iframe width="100%" height="560" src="https://www.youtube.com/embed/43xaoQmxL8Q" title="YouTube video player"
-                            frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/43xaoQmxL8Q" title="Démo vidéo de l'application Vapeur"
+                            frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
+                            allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
                             allowfullscreen></iframe>
-                
+                            <p class="modal-popup__caption">Filtrage par tags et recommandation calculés entièrement sur l'appareil, sans backend.</p>
+
                             <div class="modal-popup__desc">
                                 <h5>Vapeur</h5>
-                                <p>Application de recommandation adaptative sur mobile en équipe de 4.</p>
-                                <p></p>
+                                <p class="modal-popup__intro">Projet académique SAE S5.01, même équipe de 5 — 151 commits.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Recommander des jeux vidéo par affinité de tags, sans compte utilisateur et sans dépendre d'un serveur distant.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Application mobile React Native avec stockage local (SQLite, AsyncStorage) : tout le filtrage et la recommandation s'exécutent sur l'appareil. Testée en conditions réelles via Expo Go (QR code).</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une appli de recommandation fonctionnelle et 100% locale, sans backend ni authentification à gérer.</p>
+
                                 <ul class="modal-popup__cat">
-                                    <li>Mobile</li>
                                     <li>React Native</li>
+                                    <li>SQLite</li>
+                                    <li>AsyncStorage</li>
                                 </ul>
+
+                                <a href="#modal-03" class="modal-popup__next">Projet suivant : Horizon →</a>
                             </div>
-                
-                            <a href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" class="modal-popup__details">Lien projet</a>
+
+                            <a href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
                         </div>
                     </div> <!-- end modal -->
 
                     <div id="modal-03" hidden>
                         <div class="modal-popup">
-                        <img src="images/icons/wip.png" alt="">
-                
+                        <div class="modal-popup__placeholder" role="img" aria-label="Capture d'écran à venir — Horizon v1.1.0, Laravel 12 / Inertia.js / React 19">
+                            <span class="modal-popup__placeholder-tag">Horizon · v1.1.0</span>
+                            <span class="modal-popup__placeholder-stack">Laravel 12 · Inertia.js · React 19 · SQLite (FTS5)</span>
+                            <span class="modal-popup__placeholder-note">Capture d'écran à venir</span>
+                        </div>
+
                             <div class="modal-popup__desc">
                                 <h5>Horizon</h5>
-                                <p>Une application web qui simplifie la gestion de projets pour les équipes.</p>
-                                <p>Mon premier projet react+laravel pour découvrir les framework</p>
+                                <p class="modal-popup__intro">Projet personnel solo, pour approfondir React et Laravel — actuellement en v1.1.0.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Concevoir un outil de gestion de projet complet (Kanban, calendrier, Gantt, dépendances entre tâches), déployé sur mon homelab, avec une architecture propre, sans dupliquer la logique entre un front et une API séparée.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Laravel 12 + Inertia.js + React 19 : les données transitent directement du contrôleur à la vue React, sans API REST intermédiaire, et toute l'autorisation passe par des Policies Laravel. Recherche plein texte via SQLite FTS5, détection de cycles de dépendances par parcours de graphe (BFS) écrit à la main, pièces jointes multiples (10 max, 2 Mo chacune) en stockage privé, visibilité par membre au niveau du projet, recherche globale (Cmd/Ctrl+K), rappels d'échéance planifiés.</p>
+                                <p>Durcissement sécurité : CSP à nonces, HSTS, X-Frame-Options, redirection HTTPS automatique derrière reverse proxy, audits composer/npm en CI. Déploiement Docker multi-stage (build Node → PHP-FPM/nginx sur Alpine).</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une v1.1.0 fonctionnelle, avec compte et jeu de données de démonstration, entièrement en français.</p>
 
                                 <ul class="modal-popup__cat">
-                                    <li>React</li>
-                                    <li>Laravel</li>
-                                    <li>PHP</li>
+                                    <li>Laravel 12</li>
+                                    <li>Inertia.js</li>
+                                    <li>React 19</li>
+                                    <li>Docker</li>
                                 </ul>
-                            </div>
-                
-                            <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details">Lien projet</a>
-                        </div>
-                    </div> <!-- end modal -->
 
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Since Day One</h5>
-                                <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Website</li>
-                                </ul>
+                                <a href="#modal-01" class="modal-popup__next">Projet suivant : QVoronoÏ →</a>
                             </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
 
-                    <div id="modal-05" hidden>
-                        <div class="modal-popup">
-
-                            <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Sand Dunes</h5>
-                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Illustration</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-06" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="">
-                
-                            <div class="modal-popup__desc">
-                                <h5>Minimalismo</h5>
-                                <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                                <ul class="modal-popup__cat">
-                                    <li>Branding</li>
-                                    <li>Product Design</li>
-                                </ul>
-                            </div>
-                
-                            <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
+                            <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
                         </div>
                     </div> <!-- end modal -->
 
@@ -477,6 +601,14 @@
             <!-- ### contact
             ================================================== -->
             <section id="contact" class="s-contact target-section">
+
+                <div class="circles" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
 
                 <div class="row contact-top">
                     <div class="column lg-12">
@@ -497,14 +629,14 @@
                         <h3 class="text-pretitle">Contact</h3>
                         <p class="contact-links">
                             <a href="mailto:allanabatucipro@gmail.com" class="mailtoui">allanabatucipro@gmail.com</a> <br>
-                            <a href="tel:+1975432345">+33 783 17 25 47</a>
+                            <a href="tel:+33783172547">+33 783 17 25 47</a>
                         </p>
                     </div>
                     <div class="column lg-4 md-5 tab-6 stack-on-550 contact-block">
                         <h3 class="text-pretitle">Social</h3>
                         <ul class="contact-social">
-                            <li><a href="https://www.linkedin.com/in/allan-abatuci-202680258/">Linkedin</a></li>
-                            <li><a href="https://github.com/Allan-ABATUCI">Github</a></li>
+                            <li><a href="https://www.linkedin.com/in/allan-abatuci-202680258/" rel="noopener noreferrer">Linkedin</a></li>
+                            <li><a href="https://github.com/Allan-ABATUCI" rel="noopener noreferrer">Github</a></li>
                         </ul>
                     </div>
                     <div class="column lg-4 md-12 contact-block">
@@ -526,7 +658,7 @@
 
                 <div class="ss-go-top">
                     <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill-rule="evenodd" clip-rule="evenodd"><path d="M11 2.206l-6.235 7.528-.765-.645 7.521-9 7.479 9-.764.646-6.236-7.53v21.884h-1v-21.883z"/></svg>
+                        <span aria-hidden="true">↑</span>
                     </a>
                 </div>
             </div>
