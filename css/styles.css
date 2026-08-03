@@ -4525,6 +4525,27 @@ button:hover {
     top        : .2em;
 }
 
+/* art ASCII en fond, fixe et très discret, derrière tout le contenu */
+.ascii-bg {
+    display        : flex;
+    align-items    : center;
+    justify-content : center;
+    position       : fixed;
+    inset          : 0;
+    margin         : 0;
+    padding        : 0;
+    overflow       : hidden;
+    pointer-events : none;
+    user-select    : none;
+    font-family    : var(--font-mono);
+    font-size      : 1.3vw;
+    line-height    : 1;
+    letter-spacing : 0;
+    white-space    : pre;
+    color          : var(--color-white);
+    opacity        : .05;
+}
+
 @media (prefers-reduced-motion: reduce) {
     .timeline__bullet,
     .s-pagewrap .circles span {
