@@ -4305,21 +4305,20 @@ html {
     background-color : var(--color-1-darker);
 }
 
-/* petit sigil braise à côté du logo */
-.home-link {
-    position : relative;
+/* logo dans le header, à la place du texte + sigil
+   (spécificité renforcée : la règle de base ".main-nav a" est
+   elle-même class+élément et gagnerait sinon face à ".home-link" seul) */
+.mobile-home-link a,
+.main-nav a.home-link {
+    display     : flex;
+    align-items : center;
+    height      : var(--header-height);
 }
 
-.home-link::after {
-    content        : "";
-    display        : inline-block;
-    width          : 5px;
-    height         : 5px;
-    margin-left    : .6em;
-    border-radius  : 50%;
-    background     : var(--color-1);
-    box-shadow     : 0 0 6px 1px var(--ember-glow);
-    vertical-align : middle;
+.home-logo {
+    display : block;
+    height  : 2.4rem;
+    width   : auto;
 }
 
 /* trait de pretitle façon traînée de braise */
