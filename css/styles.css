@@ -2659,7 +2659,7 @@ img.u-pull-left {
     font-family    : var(--font-1);
     font-size      : var(--text-sm);
     font-weight    : 400;
-    color          : var(--color-text-dark);
+    color          : var(--color-white);
     text-transform : uppercase;
     letter-spacing : .3em;
     margin-top     : 0;
@@ -2936,9 +2936,9 @@ img.u-pull-left {
     z-index          : 101;
     display          : none;
     height           : var(--header-height);
-    background-color : var(--light-body);
+    background-color : var(--color-body);
     box-shadow       : var(--box-shadow);
-    border-bottom    : 1px solid var(--light-border);
+    border-bottom    : 1px solid var(--color-border);
 }
 
 /* --------------------------------------------------------------------
@@ -2952,7 +2952,7 @@ img.u-pull-left {
     line-height         : var(--header-height);
     text-transform      : uppercase;
     letter-spacing      : .35em;
-    color               : var(--light-text-dark);
+    color               : white;
     transition-property : color, background-color;
 }
 
@@ -2982,8 +2982,7 @@ img.u-pull-left {
 }
 
 .main-nav .current a {
-    background-color : rgba(211, 0, 70, .08);
-    color             : var(--color-1);
+    background-color : var(--color-gray-9);
 }
 
 .main-nav ul {
@@ -2992,9 +2991,9 @@ img.u-pull-left {
     flex-flow        : row nowrap;
     margin           : 0;
     padding          : 0;
-    background-color : transparent;
+    background-color : var(--color-body);
     border-width     : 1px;
-    border-color     : var(--light-border);
+    border-color     : var(--color-border);
     border-style     : none solid solid solid;
 }
 
@@ -3022,7 +3021,7 @@ img.u-pull-left {
 
 .mobile-menu-toggle span {
     display          : block;
-    background-color : var(--light-text-dark);
+    background-color : white;
     width            : 24px;
     height           : 1px;
     margin-top       : -1px;
@@ -3103,8 +3102,8 @@ img.u-pull-left {
     .main-nav-wrap {
         transform        : scaleY(0);
         transform-origin : center top;
-        background-color : var(--light-body);
-        border-bottom    : 1px solid var(--light-border);
+        background-color : var(--color-body);
+        border-bottom    : 1px solid var(--color-border);
         box-shadow       : var(--box-shadow);
     }
 
@@ -3623,7 +3622,7 @@ img.u-pull-left {
     display             : block;
     width               : 100%;
     padding-left        : calc(5.5 * var(--space));
-    color               : var(--color-text-dark);
+    color               : white;
     transition-duration : .5s;
     position            : relative;
 }
@@ -3758,7 +3757,7 @@ img.u-pull-left {
     display     : block;
     font-size   : 1.8rem;
     line-height : 1;
-    color       : var(--color-text-dark);
+    color       : white;
     transform   : translate(-50%, -50%);
     position    : absolute;
     top         : 50%;
@@ -4151,7 +4150,7 @@ img.u-pull-left {
 
 .s-footer a:focus,
 .s-footer a:hover {
-    color : var(--color-1);
+    color : white;
 }
 
 /* ------------------------------------------------------------------- 
@@ -4204,20 +4203,20 @@ img.u-pull-left {
 
 .ss-go-top a:focus,
 .ss-go-top a:hover {
-    background-color : var(--color-1);
-    border-color     : var(--color-1);
+    background-color : white;
+    border-color     : white;
 }
 
 .ss-go-top a:focus span,
 .ss-go-top a:hover span {
-    color : white;
+    color : black;
 }
 
 .ss-go-top span {
     display     : block;
     font-size   : 1.8rem;
     line-height : 1;
-    color       : var(--color-text-dark);
+    color       : white;
     transition  : all 0.3s ease-in-out;
 }
 
@@ -4263,13 +4262,11 @@ img.u-pull-left {
 }
 
 /* vignette d'ambiance — pur CSS, aucune image */
-/* vignette confinée au hero : le reste du site est désormais clair,
-   cet effet n'a plus lieu d'assombrir toute la page */
-.s-intro::before {
+body::before {
     content        : "";
-    position       : absolute;
+    position       : fixed;
     inset          : 0;
-    z-index        : 0;
+    z-index        : 2;
     pointer-events : none;
     background     :
         radial-gradient(ellipse at 15% 0%, hsla(338, 100%, 30%, .09), transparent 55%),
@@ -4522,47 +4519,6 @@ button:hover {
     position   : absolute;
     left       : 0;
     top        : .2em;
-}
-
-/* ===================================================================
- * # THÈME CLAIR HYBRIDE
- *
- * Le hero (#intro) reste sombre pour l'impact. Tout le reste du site
- * (Moi, Projets, Contact, footer) passe en clair, en gardant les
- * deux accents existants (rouge ember + bleu spectral). On redéfinit
- * les tokens de couleur au niveau de chaque section : tous les
- * composants qui les consomment déjà via var(--color-*) se
- * re-thèment automatiquement, sans dupliquer leurs règles.
- * ------------------------------------------------------------------- */
-:root {
-    --light-body       : #f7f4f1;
-    --light-text       : #4a453f;
-    --light-text-dark  : #1c1a18;
-    --light-text-light : #948c84;
-    --light-border     : rgba(28, 26, 24, .1);
-}
-
-.s-about,
-.s-works,
-.s-contact,
-.s-footer {
-    --color-body       : var(--light-body);
-    --color-text       : var(--light-text);
-    --color-text-dark  : var(--light-text-dark);
-    --color-text-light : var(--light-text-light);
-    --color-border     : var(--light-border);
-    --color-btn            : var(--color-1);
-    --color-btn-text       : #ffffff;
-    --color-btn-hover      : var(--light-text-dark);
-    --color-btn-hover-text : var(--color-1);
-    background-color : var(--color-body);
-}
-
-/* header : barre claire fixe, cohérente qu'elle survole le hero
-   sombre ou les sections claires */
-.s-header {
-    background-color : var(--light-body);
-    border-bottom     : 1px solid var(--light-border);
 }
 
 @media (prefers-reduced-motion: reduce) {
