@@ -4316,6 +4316,10 @@ html {
     display : block;
     height  : 2.4rem;
     width   : auto;
+    /* la marque source est un trait sombre sur fond transparent,
+       pensée pour un header clair — inversée ici pour rester
+       lisible sur le header sombre */
+    filter  : invert(1) brightness(1.3);
 }
 
 /* trait de pretitle façon traînée de braise */
