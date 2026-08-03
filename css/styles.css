@@ -4238,3 +4238,134 @@ img.u-pull-left {
         right : 6vw;
     }
 }
+
+/* ===================================================================
+ * # THEME — accents discrets inspirés de Dark Souls / Hollow Knight
+ *
+ * Pas d'assets ni de logos tiers : uniquement palette, typographie
+ * et micro-animations maison sur la base du thème existant.
+ * ------------------------------------------------------------------- */
+:root {
+    --color-2         : hsl(198, 62%, 60%);
+    --color-2-lighter : hsl(198, 62%, 86%);
+    --color-2-light   : hsl(198, 62%, 74%);
+    --color-2-dark    : hsl(198, 62%, 40%);
+    --color-2-darker  : hsl(198, 62%, 26%);
+    --ember-glow      : hsla(338, 100%, 41%, .45);
+    --void-glow       : hsla(198, 62%, 60%, .35);
+}
+
+/* vignette d'ambiance — pur CSS, aucune image */
+body::before {
+    content        : "";
+    position       : fixed;
+    inset          : 0;
+    z-index        : 2;
+    pointer-events : none;
+    background     :
+        radial-gradient(ellipse at 15% 0%, hsla(338, 100%, 30%, .09), transparent 55%),
+        radial-gradient(ellipse at 100% 100%, hsla(198, 62%, 30%, .09), transparent 55%),
+        radial-gradient(ellipse at 50% 50%, transparent 60%, rgba(0, 0, 0, .5) 130%);
+}
+
+::selection {
+    background-color : var(--color-1);
+    color            : var(--color-white);
+}
+
+html {
+    scrollbar-width : thin;
+    scrollbar-color : var(--color-gray-8) var(--color-gray-11);
+}
+
+::-webkit-scrollbar {
+    width : 10px;
+}
+
+::-webkit-scrollbar-track {
+    background : var(--color-gray-11);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color : var(--color-gray-8);
+    border-radius     : 6px;
+    border            : 2px solid var(--color-gray-11);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color : var(--color-1-darker);
+}
+
+/* petit sigil braise à côté du logo */
+.home-link {
+    position : relative;
+}
+
+.home-link::after {
+    content        : "";
+    display        : inline-block;
+    width          : 5px;
+    height         : 5px;
+    margin-left    : .6em;
+    border-radius  : 50%;
+    background     : var(--color-1);
+    box-shadow     : 0 0 6px 1px var(--ember-glow);
+    vertical-align : middle;
+}
+
+/* trait de pretitle façon traînée de braise */
+.text-pretitle.with-line::before {
+    background : linear-gradient(90deg, transparent, var(--color-1) 70%, transparent);
+}
+
+/* boutons : lueur discrète au survol, comme un feu qu'on ranime */
+.btn:focus,
+.btn:hover,
+button:focus,
+button:hover {
+    box-shadow : 0 0 22px 0 var(--ember-glow);
+}
+
+/* puces de timeline : pulsation façon âme/soul-pip */
+.timeline__bullet {
+    box-shadow : 0 0 0 3px hsla(338, 100%, 41%, .12);
+    animation  : theme-ember-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes theme-ember-pulse {
+    0%, 100% { box-shadow : 0 0 0 3px hsla(338, 100%, 41%, .12); }
+    50%      { box-shadow : 0 0 0 6px hsla(338, 100%, 41%, .22); }
+}
+
+/* catégories de projets en petits badges façon "quête" */
+.folio-list__item-cat {
+    display        : inline-block;
+    padding        : .15em .8em;
+    border         : 1px solid var(--color-border);
+    border-radius  : 1000px;
+    text-transform : uppercase;
+    letter-spacing : .15em;
+    font-size      : var(--text-sm);
+}
+
+/* anneaux déjà présents en fond : respiration lente façon halo */
+.s-pagewrap .circles span {
+    animation : theme-ring-breathe 6s ease-in-out infinite;
+}
+
+.s-pagewrap .circles span:nth-child(2) { animation-delay : -1.2s; }
+.s-pagewrap .circles span:nth-child(3) { animation-delay : -2.4s; }
+.s-pagewrap .circles span:nth-child(4) { animation-delay : -3.6s; }
+.s-pagewrap .circles span:nth-child(5) { animation-delay : -4.8s; }
+
+@keyframes theme-ring-breathe {
+    0%, 100% { opacity : .08; }
+    50%      { opacity : .22; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .timeline__bullet,
+    .s-pagewrap .circles span {
+        animation : none;
+    }
+}
