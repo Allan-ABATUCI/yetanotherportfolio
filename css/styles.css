@@ -2910,9 +2910,29 @@ img.u-pull-left {
  * page-wrap
  * ------------------------------------------------------------------- */
 @media screen and (max-width: 800px) {
-    .s-pagewrap .circles {
+    .s-intro .circles {
         top : calc(var(--header-height) + 5vh);
     }
+}
+
+/* même anneau décoratif repris dans les autres sections, en
+   alternant de côté à chaque fois (intro : droite) */
+.s-about .circles {
+    top       : 50%;
+    left      : -33vw;
+    transform : translateY(-50%);
+}
+
+.s-works .circles {
+    top       : 50%;
+    left      : calc(100% - 33vw);
+    transform : translateY(-50%);
+}
+
+.s-contact .circles {
+    top       : 50%;
+    left      : -33vw;
+    transform : translateY(-50%);
 }
 
 
@@ -3395,6 +3415,8 @@ img.u-pull-left {
 .s-about {
     padding-top    : var(--vspace-4);
     padding-bottom : var(--vspace-3);
+    position       : relative;
+    overflow       : hidden;
 }
 
 /* --------------------------------------------------------------------
@@ -3596,6 +3618,13 @@ img.u-pull-left {
 .s-works {
     padding-top    : var(--vspace-5);
     padding-bottom : var(--vspace-3_5);
+    position       : relative;
+    overflow       : hidden;
+}
+
+.s-contact {
+    position : relative;
+    overflow : hidden;
 }
 
 .s-works .h1 {
