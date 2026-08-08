@@ -417,8 +417,8 @@
                             <li class="folio-list__item column" data-animate-el>
                                 <a class="folio-list__item-link" href="#modal-03">
                                     <div class="folio-list__item-pic">
-                                        <img src="images/icons/wip.png"
-                                            alt="">
+                                        <img src="images/portfolio/horizon.png"
+                                             srcset="images/portfolio/horizon.png 1x, images/portfolio/horizon@2x.png 2x" alt="">
                                     </div>
 
                                     <div class="folio-list__item-text">
@@ -579,11 +579,9 @@
 
                     <div id="modal-03" hidden>
                         <div class="modal-popup">
-                        <div class="modal-popup__placeholder" role="img" aria-label="Capture d'écran à venir — Horizon v1.1.0, Laravel 12 / Inertia.js / React 19">
-                            <span class="modal-popup__placeholder-tag">Horizon · v1.1.0</span>
-                            <span class="modal-popup__placeholder-stack">Laravel 12 · Inertia.js · React 19 · SQLite (FTS5)</span>
-                            <span class="modal-popup__placeholder-note">Capture d'écran à venir</span>
-                        </div>
+                        <img src="images/portfolio/gallery/g-horizon.png"
+                             alt="Tableau de bord Horizon : vue Kanban des tâches, avec statuts, assignés et échéances.">
+                        <p class="modal-popup__caption">Vue Kanban du tableau de bord, avec le jeu de données de démonstration.</p>
 
                             <div class="modal-popup__desc">
                                 <h5>Horizon</h5>
@@ -594,10 +592,11 @@
 
                                 <h6 class="modal-popup__section-title">Approche</h6>
                                 <p>Laravel 12 + Inertia.js + React 19 : les données transitent directement du contrôleur à la vue React, sans API REST intermédiaire, et toute l'autorisation passe par des Policies Laravel. Recherche plein texte via SQLite FTS5, détection de cycles de dépendances par parcours de graphe (BFS) écrit à la main, pièces jointes multiples (10 max, 2 Mo chacune) en stockage privé, visibilité par membre au niveau du projet, recherche globale (Cmd/Ctrl+K), rappels d'échéance planifiés.</p>
-                                <p>Durcissement sécurité : CSP à nonces, HSTS, X-Frame-Options, redirection HTTPS automatique derrière reverse proxy, audits composer/npm en CI. Déploiement Docker multi-stage (build Node → PHP-FPM/nginx sur Alpine).</p>
+                                <p>Durcissement sécurité : CSP à nonces, HSTS, X-Frame-Options, redirection HTTPS automatique derrière reverse proxy. Déploiement Docker multi-stage (build Node → PHP-FPM/nginx sur Alpine).</p>
+                                <p>Déploiement automatisé sur mon homelab : un workflow GitHub Actions lance les tests et des audits composer/npm à chaque push, puis un second workflow s'exécute sur un runner auto-hébergé pour reconstruire et relancer les conteneurs (<code>docker compose up --build --wait</code>), vérifier la santé de l'app (<code>/up</code>) et notifier le résultat sur Discord.</p>
 
                                 <h6 class="modal-popup__section-title">Résultat</h6>
-                                <p>Une v1.1.0 fonctionnelle, avec compte et jeu de données de démonstration, entièrement en français.</p>
+                                <p>Une v1.1.0 fonctionnelle, avec compte et jeu de données de démonstration, entièrement en français — en ligne sur <a href="https://horizon.allanab.com" target="_blank" rel="noopener noreferrer">horizon.allanab.com</a>.</p>
 
                                 <ul class="modal-popup__cat">
                                     <li>Laravel 12</li>
@@ -609,7 +608,10 @@
                                 <a href="#modal-01" class="modal-popup__next">Projet suivant : QVoronoÏ →</a>
                             </div>
 
-                            <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
+                            <div class="modal-popup__details-group">
+                                <a href="https://horizon.allanab.com" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Voir le site</a>
+                                <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
+                            </div>
                         </div>
                     </div> <!-- end modal -->
 
@@ -628,10 +630,10 @@
 
                                 <h6 class="modal-popup__section-title">Approche</h6>
                                 <p>Un vieux portable Dell (4 Go de RAM) reconverti sous Linux Server fait office d'hôte. Le trafic passe par un tunnel Cloudflare plutôt que par une redirection de port : les requêtes transitent d'abord par les serveurs de Cloudflare avant d'atteindre la partie exposée du réseau, ce qui évite d'avoir à surveiller le trafic en continu. L'application (Horizon) tourne dans un conteneur Docker, à la fois pour une couche de sécurité supplémentaire et pour simplifier le déploiement.</p>
-                                <p>Un runner GitHub Actions auto-hébergé alimente une pipeline CI/CD qui met à jour l'application automatiquement. Le monitoring est assuré par Grafana, avec des alertes envoyées directement sur Discord via webhook.</p>
+                                <p>Le déploiement est automatisé via GitHub Actions : un workflow lance les tests, puis un second s'exécute sur un runner auto-hébergé pour reconstruire les conteneurs et vérifier que l'app répond avant de considérer le déploiement réussi. Le monitoring est assuré par Grafana, avec des alertes envoyées directement sur Discord via webhook.</p>
 
                                 <h6 class="modal-popup__section-title">Résultat</h6>
-                                <p>Une infrastructure personnelle qui héberge Horizon en continu, mise à jour automatiquement, surveillée sans intervention manuelle, sans coût d'hébergement cloud et sans exposer directement le réseau domestique.</p>
+                                <p>Une infrastructure personnelle qui héberge <a href="https://horizon.allanab.com" target="_blank" rel="noopener noreferrer">Horizon</a> en continu, mise à jour automatiquement, surveillée sans intervention manuelle, sans coût d'hébergement cloud et sans exposer directement le réseau domestique.</p>
 
                                 <ul class="modal-popup__cat">
                                     <li>Docker</li>
