@@ -77,6 +77,16 @@
  * ------------------------------------------------------------------- */
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Spectral:wght@400;600&display=swap");
 
+/* auto-hébergée (pas sur Google Fonts) pour éviter d'ouvrir la CSP à un
+   domaine tiers de plus — utilisée ponctuellement pour le placeholder Homelab */
+@font-face {
+    font-family : "Satoshi";
+    src         : url("../fonts/Satoshi-Black.woff2") format("woff2");
+    font-weight : 900;
+    font-style  : normal;
+    font-display: swap;
+}
+
 :root {
 
     --font-1 : "Manrope", sans-serif;
@@ -151,9 +161,9 @@
 
     /* text
      */
-    --color-text        : var(--color-gray-4);
+    --color-text        : var(--color-gray-3);
     --color-text-dark   : var(--color-white);
-    --color-text-light  : var(--color-gray-7);
+    --color-text-light  : var(--color-gray-5);
     --color-placeholder : var(--color-gray-7);
 
     /* buttons
@@ -4512,6 +4522,37 @@ button:hover {
     text-transform : uppercase;
     letter-spacing : .15em;
     color          : var(--color-1);
+}
+
+.modal-popup__placeholder-word {
+    font-family    : "Satoshi", sans-serif;
+    font-weight    : 900;
+    font-size      : clamp(3.2rem, 8vw, 6rem);
+    line-height    : 1;
+    color          : var(--color-1);
+    text-transform : uppercase;
+    letter-spacing : .02em;
+}
+
+/* carte projet sans capture réelle : même traitement que le placeholder
+   de modal, en miniature */
+.folio-list__item-pic--text {
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : var(--item-min-height);
+    height          : var(--item-min-height);
+    background      : linear-gradient(135deg, var(--color-gray-9), var(--color-gray-11));
+    text-align      : center;
+    padding         : 0 1rem;
+}
+
+.folio-list__item-pic--text span {
+    font-family : "Satoshi", sans-serif;
+    font-weight : 900;
+    font-size   : 2.6rem;
+    line-height : 1;
+    color       : var(--color-1);
 }
 
 /* section "faits marquants" */
