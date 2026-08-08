@@ -486,6 +486,27 @@
                                 </a>
                             </li> <!--end folio-list__item -->
 
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-04">
+                                    <div class="folio-list__item-pic">
+                                        <img src="images/icons/wip.png"
+                                            alt="">
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Homelab
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Serveur maison
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : exposer un service en sécurité sans ouvrir de port sur le routeur.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
                     </div> <!-- end column -->
 
 
@@ -550,7 +571,7 @@
                                     <li>AsyncStorage</li>
                                 </ul>
 
-                                <a href="#modal-03" class="modal-popup__next">Projet suivant : Horizon →</a>
+                                <a href="#modal-04" class="modal-popup__next">Projet suivant : Serveur maison →</a>
                             </div>
 
                             <a href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
@@ -590,6 +611,40 @@
                             </div>
 
                             <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-04" hidden>
+                        <div class="modal-popup">
+                        <div class="modal-popup__placeholder" role="img" aria-label="Capture d'écran à venir — serveur maison, Dell 4 Go de RAM sous Linux Server">
+                            <span class="modal-popup__placeholder-tag">Serveur maison</span>
+                            <span class="modal-popup__placeholder-stack">Dell 4 Go RAM · Linux Server · Docker · Cloudflare Tunnel</span>
+                            <span class="modal-popup__placeholder-note">Capture d'écran à venir</span>
+                        </div>
+
+                            <div class="modal-popup__desc">
+                                <h5>Serveur maison</h5>
+                                <p class="modal-popup__intro">Projet personnel, pour héberger mes propres services sans dépendre du cloud.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Exposer un service web sur internet sans ouvrir de port sur mon routeur : un port ouvert directement expose le réseau domestique aux scans automatisés (effet honeypot) et demande une surveillance constante du trafic.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Un vieux portable Dell (4 Go de RAM) reconverti sous Linux Server fait office d'hôte. Le trafic passe par un tunnel Cloudflare plutôt que par une redirection de port : les requêtes transitent d'abord par les serveurs de Cloudflare avant d'atteindre la partie exposée du réseau, ce qui évite d'avoir à surveiller le trafic en continu. L'application (Horizon) tourne dans un conteneur Docker, à la fois pour une couche de sécurité supplémentaire et pour simplifier le déploiement.</p>
+                                <p>Un runner GitHub Actions auto-hébergé alimente une pipeline CI/CD qui met à jour l'application automatiquement. Le monitoring est assuré par Grafana, avec des alertes envoyées directement sur Discord via webhook.</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une infrastructure personnelle qui héberge Horizon en continu, mise à jour automatiquement, surveillée sans intervention manuelle, sans coût d'hébergement cloud et sans exposer directement le réseau domestique.</p>
+
+                                <ul class="modal-popup__cat">
+                                    <li>Docker</li>
+                                    <li>Cloudflare Tunnel</li>
+                                    <li>GitHub Actions</li>
+                                    <li>Grafana</li>
+                                </ul>
+
+                                <a href="#modal-03" class="modal-popup__next">Projet suivant : Horizon →</a>
+                            </div>
                         </div>
                     </div> <!-- end modal -->
 
