@@ -3893,6 +3893,19 @@ img.u-pull-left {
     color            : white;
 }
 
+/* variante pour les projets avec plus d'un lien (repo + site en ligne) */
+.modal-popup__details-group {
+    position : absolute;
+    top      : var(--vspace-1);
+    left     : var(--vspace-1);
+    display  : flex;
+    gap      : .8rem;
+}
+
+.modal-popup__details-group .modal-popup__details {
+    position : static;
+}
+
 /* ------------------------------------------------------------------- 
  * ## testimonials
  * ------------------------------------------------------------------- */
