@@ -3660,7 +3660,6 @@ img.u-pull-left {
 .folio-list__item-link {
     display             : block;
     width               : 100%;
-    padding-left        : calc(5.5 * var(--space));
     color               : white;
     transition-duration : .5s;
     position            : relative;
@@ -3691,18 +3690,20 @@ img.u-pull-left {
 }
 
 .folio-list__item-pic {
-    display  : block;
-    position : absolute;
-    top      : 0;
-    left     : 0;
+    display       : block;
+    position      : relative;
+    overflow      : hidden;
+    border-radius : var(--border-radius);
 }
 
-.folio-list__item-pic img {
-    vertical-align : bottom;
-    object-fit     : cover;
-    width          : var(--item-min-height);
-    height         : var(--item-min-height);
-    margin         : 0;
+.folio-list__item-pic img,
+.folio-list__item-pic video {
+    display        : block;
+    vertical-align  : bottom;
+    object-fit      : cover;
+    width           : 100%;
+    aspect-ratio    : 16 / 10;
+    margin          : 0;
 }
 
 .folio-list__item-pic::before,
@@ -3754,8 +3755,8 @@ img.u-pull-left {
 
 .folio-list__item-text {
     padding-top : var(--vspace-0_5);
+    margin-top  : var(--vspace-0_75);
     border-top  : 1px solid var(--color-border);
-    min-height  : var(--item-min-height);
     position    : relative;
 }
 
@@ -3811,7 +3812,7 @@ img.u-pull-left {
  * ## modal popup
  * ------------------------------------------------------------------- */
 .modal-popup {
-    max-width        : 680px;
+    max-width        : 840px;
     max-height       : 88vh;
     background-color : white;
     font-size        : calc(var(--text-size) * 0.9447);
@@ -4049,41 +4050,9 @@ img.u-pull-left {
     .folio-list__item {
         margin-bottom : var(--vspace-0_75);
     }
-
-    .folio-list__item-link {
-        padding-left : calc(4.25 * var(--space));
-    }
 }
 
 @media screen and (max-width: 400px) {
-    .folio-list .column {
-        flex  : none;
-        width : 50%;
-    }
-
-    .folio-list__item {
-        margin-bottom : 0;
-    }
-
-    .folio-list__item-link {
-        padding-left : 0;
-    }
-
-    .folio-list__item-pic {
-        position : static;
-    }
-
-    .folio-list__item-pic img {
-        max-width : 100%;
-        width     : 100%;
-        height    : auto;
-    }
-
-    .folio-list__item-text,
-    .folio-list__proj-link {
-        display : none;
-    }
-
     .modal-popup__desc {
         padding : 0 var(--vspace-1) var(--vspace-0_25);
     }
@@ -4553,8 +4522,8 @@ button:hover {
     display         : flex;
     align-items     : center;
     justify-content : center;
-    width           : var(--item-min-height);
-    height          : var(--item-min-height);
+    width           : 100%;
+    aspect-ratio    : 16 / 10;
     background      : linear-gradient(135deg, var(--color-gray-9), var(--color-gray-11));
     text-align      : center;
     padding         : 0 1rem;
@@ -4563,7 +4532,7 @@ button:hover {
 .folio-list__item-pic--text span {
     font-family : "Satoshi", sans-serif;
     font-weight : 900;
-    font-size   : 2.6rem;
+    font-size   : clamp(2.6rem, 5vw, 4rem);
     line-height : 1;
     color       : var(--color-1);
 }
