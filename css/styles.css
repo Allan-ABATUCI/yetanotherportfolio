@@ -3880,11 +3880,14 @@ img.u-pull-left {
 }
 
 .modal-popup__details {
-    background-color : rgba(0, 0, 0, 0.3);
+    background-color : rgba(0, 0, 0, 0.6);
+    backdrop-filter   : blur(4px);
+    -webkit-backdrop-filter : blur(4px);
     font-size        : var(--text-xs);
     line-height      : var(--vspace-1_25);
     color            : white;
     padding          : 0 1.2rem;
+    border-radius    : var(--border-radius);
     position         : absolute;
     top              : var(--vspace-1);
     left             : var(--vspace-1);
