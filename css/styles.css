@@ -3707,12 +3707,15 @@ img.u-pull-left {
     margin          : 0;
 }
 
-/* footage from a portrait phone screen: crop to the top of the frame
-   instead of the center, so the game card stays in view instead of
-   the status bar / bottom nav */
+/* footage from a portrait phone screen: show the whole recording
+   (letterboxed) instead of cropping it down to a sliver */
+.folio-list__item-pic--portrait {
+    background-color : var(--color-body);
+}
+
 .folio-list__item-pic--portrait img,
 .folio-list__item-pic--portrait video {
-    object-position : center 20%;
+    object-fit : contain;
 }
 
 .folio-list__item-pic::before,
@@ -4409,6 +4412,7 @@ button:hover {
     text-transform : uppercase;
     letter-spacing : .15em;
     font-size      : var(--text-sm);
+    margin-bottom  : var(--vspace-0_5);
 }
 
 /* anneaux déjà présents en fond : respiration lente façon halo */
