@@ -3707,6 +3707,14 @@ img.u-pull-left {
     margin          : 0;
 }
 
+/* footage from a portrait phone screen: crop to the top of the frame
+   instead of the center, so the game card stays in view instead of
+   the status bar / bottom nav */
+.folio-list__item-pic--portrait img,
+.folio-list__item-pic--portrait video {
+    object-position : center 20%;
+}
+
 .folio-list__item-pic::before,
 .folio-list__item-pic::after {
     transition : all, 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -3826,6 +3834,25 @@ img.u-pull-left {
 .modal-popup img,
 .modal-popup video {
     margin-bottom : var(--vspace-0_75);
+}
+
+/* footage recorded from a portrait phone screen doesn't fit the usual
+   full-width landscape treatment - letterbox it on a dark panel instead
+   of cropping or stretching it */
+.modal-popup__phone-video {
+    background-color : var(--color-body);
+    display           : flex;
+    justify-content   : center;
+    max-height        : 520px;
+    margin-bottom     : var(--vspace-0_75);
+    overflow          : hidden;
+}
+
+.modal-popup__phone-video video {
+    max-height : 520px;
+    width      : auto;
+    max-width  : 100%;
+    margin     : 0;
 }
 
 .modal-popup h5 {
