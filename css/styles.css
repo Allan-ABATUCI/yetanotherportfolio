@@ -2926,16 +2926,17 @@ img.u-pull-left {
 }
 
 /* même anneau décoratif repris dans les autres sections, en
-   alternant de côté à chaque fois (intro : droite) */
+   alternant de côté à chaque fois (ordre réel de la page :
+   intro droite, projets gauche, moi droite, contact gauche) */
 .s-about .circles {
     top       : 50%;
-    left      : -33vw;
+    left      : calc(100% - 33vw);
     transform : translateY(-50%);
 }
 
 .s-works .circles {
     top       : 50%;
-    left      : calc(100% - 33vw);
+    left      : -33vw;
     transform : translateY(-50%);
 }
 
