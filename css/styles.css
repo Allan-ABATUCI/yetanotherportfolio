@@ -2926,16 +2926,17 @@ img.u-pull-left {
 }
 
 /* même anneau décoratif repris dans les autres sections, en
-   alternant de côté à chaque fois (intro : droite) */
+   alternant de côté à chaque fois (ordre réel de la page :
+   intro droite, projets gauche, moi droite, contact gauche) */
 .s-about .circles {
     top       : 50%;
-    left      : -33vw;
+    left      : calc(100% - 33vw);
     transform : translateY(-50%);
 }
 
 .s-works .circles {
     top       : 50%;
-    left      : calc(100% - 33vw);
+    left      : -33vw;
     transform : translateY(-50%);
 }
 
@@ -3660,7 +3661,6 @@ img.u-pull-left {
 .folio-list__item-link {
     display             : block;
     width               : 100%;
-    padding-left        : calc(5.5 * var(--space));
     color               : white;
     transition-duration : .5s;
     position            : relative;
@@ -3691,18 +3691,31 @@ img.u-pull-left {
 }
 
 .folio-list__item-pic {
-    display  : block;
-    position : absolute;
-    top      : 0;
-    left     : 0;
+    display       : block;
+    position      : relative;
+    overflow      : hidden;
+    border-radius : var(--border-radius);
 }
 
-.folio-list__item-pic img {
-    vertical-align : bottom;
-    object-fit     : cover;
-    width          : var(--item-min-height);
-    height         : var(--item-min-height);
-    margin         : 0;
+.folio-list__item-pic img,
+.folio-list__item-pic video {
+    display        : block;
+    vertical-align  : bottom;
+    object-fit      : cover;
+    width           : 100%;
+    aspect-ratio    : 16 / 10;
+    margin          : 0;
+}
+
+/* footage from a portrait phone screen: show the whole recording
+   (letterboxed) instead of cropping it down to a sliver */
+.folio-list__item-pic--portrait {
+    background-color : var(--color-body);
+}
+
+.folio-list__item-pic--portrait img,
+.folio-list__item-pic--portrait video {
+    object-fit : contain;
 }
 
 .folio-list__item-pic::before,
@@ -3754,8 +3767,8 @@ img.u-pull-left {
 
 .folio-list__item-text {
     padding-top : var(--vspace-0_5);
+    margin-top  : var(--vspace-0_75);
     border-top  : 1px solid var(--color-border);
-    min-height  : var(--item-min-height);
     position    : relative;
 }
 
@@ -3811,7 +3824,7 @@ img.u-pull-left {
  * ## modal popup
  * ------------------------------------------------------------------- */
 .modal-popup {
-    max-width        : 680px;
+    max-width        : 840px;
     max-height       : 88vh;
     background-color : white;
     font-size        : calc(var(--text-size) * 0.9447);
@@ -3821,8 +3834,28 @@ img.u-pull-left {
     position         : relative;
 }
 
-.modal-popup img {
+.modal-popup img,
+.modal-popup video {
     margin-bottom : var(--vspace-0_75);
+}
+
+/* footage recorded from a portrait phone screen doesn't fit the usual
+   full-width landscape treatment - letterbox it on a dark panel instead
+   of cropping or stretching it */
+.modal-popup__phone-video {
+    background-color : var(--color-body);
+    display           : flex;
+    justify-content   : center;
+    max-height        : 520px;
+    margin-bottom     : var(--vspace-0_75);
+    overflow          : hidden;
+}
+
+.modal-popup__phone-video video {
+    max-height : 520px;
+    width      : auto;
+    max-width  : 100%;
+    margin     : 0;
 }
 
 .modal-popup h5 {
@@ -3877,11 +3910,14 @@ img.u-pull-left {
 }
 
 .modal-popup__details {
-    background-color : rgba(0, 0, 0, 0.3);
+    background-color : rgba(0, 0, 0, 0.6);
+    backdrop-filter   : blur(4px);
+    -webkit-backdrop-filter : blur(4px);
     font-size        : var(--text-xs);
     line-height      : var(--vspace-1_25);
     color            : white;
     padding          : 0 1.2rem;
+    border-radius    : var(--border-radius);
     position         : absolute;
     top              : var(--vspace-1);
     left             : var(--vspace-1);
@@ -4049,41 +4085,9 @@ img.u-pull-left {
     .folio-list__item {
         margin-bottom : var(--vspace-0_75);
     }
-
-    .folio-list__item-link {
-        padding-left : calc(4.25 * var(--space));
-    }
 }
 
 @media screen and (max-width: 400px) {
-    .folio-list .column {
-        flex  : none;
-        width : 50%;
-    }
-
-    .folio-list__item {
-        margin-bottom : 0;
-    }
-
-    .folio-list__item-link {
-        padding-left : 0;
-    }
-
-    .folio-list__item-pic {
-        position : static;
-    }
-
-    .folio-list__item-pic img {
-        max-width : 100%;
-        width     : 100%;
-        height    : auto;
-    }
-
-    .folio-list__item-text,
-    .folio-list__proj-link {
-        display : none;
-    }
-
     .modal-popup__desc {
         padding : 0 var(--vspace-1) var(--vspace-0_25);
     }
@@ -4408,6 +4412,7 @@ button:hover {
     text-transform : uppercase;
     letter-spacing : .15em;
     font-size      : var(--text-sm);
+    margin-bottom  : var(--vspace-0_5);
 }
 
 /* anneaux déjà présents en fond : respiration lente façon halo */
@@ -4553,8 +4558,8 @@ button:hover {
     display         : flex;
     align-items     : center;
     justify-content : center;
-    width           : var(--item-min-height);
-    height          : var(--item-min-height);
+    width           : 100%;
+    aspect-ratio    : 16 / 10;
     background      : linear-gradient(135deg, var(--color-gray-9), var(--color-gray-11));
     text-align      : center;
     padding         : 0 1rem;
@@ -4563,7 +4568,7 @@ button:hover {
 .folio-list__item-pic--text span {
     font-family : "Satoshi", sans-serif;
     font-weight : 900;
-    font-size   : 2.6rem;
+    font-size   : clamp(2.6rem, 5vw, 4rem);
     line-height : 1;
     color       : var(--color-1);
 }
