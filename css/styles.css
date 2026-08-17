@@ -3823,7 +3823,8 @@ img.u-pull-left {
     position         : relative;
 }
 
-.modal-popup img {
+.modal-popup img,
+.modal-popup video {
     margin-bottom : var(--vspace-0_75);
 }
 
