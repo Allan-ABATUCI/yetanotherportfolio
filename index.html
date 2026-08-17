@@ -15,7 +15,7 @@
 
     <!-- security
     ================================================== -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'self'; object-src 'none'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; script-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- CSS
@@ -154,8 +154,8 @@
                     <ul>
                         <li><a href="index.html" class="home-link"><img src="images/icons/logo-mark.png" alt="Allan Abatuci" class="home-logo"></a></li>
                         <li class="current"><a href="#intro" class="smoothscroll">Intro</a></li>
-                        <li><a href="#about" class="smoothscroll">Moi</a></li>
                         <li><a href="#works" class="smoothscroll">Projets</a></li>
+                        <li><a href="#about" class="smoothscroll">Moi</a></li>
                         <li><a href="#contact" class="smoothscroll">Me contacter</a></li>
                     </ul>
                 </nav>
@@ -195,11 +195,276 @@
 
                 </div> <!-- end intro content -->
 
-                <a href="#about" class="intro-scrolldown smoothscroll" title="Encore un peu de courage.">
+                <a href="#works" class="intro-scrolldown smoothscroll" title="Encore un peu de courage.">
                     <span aria-hidden="true">↓</span>
                 </a>
 
             </section> <!-- end s-intro -->
+
+
+            <!-- ### works
+            ================================================== -->
+            <section id="works" class="s-works target-section">
+
+                <div class="circles" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <div class="row works-portfolio">
+
+                    <div class="column lg-12" data-animate-block>
+
+                        <h2 class="text-pretitle" data-animate-el>
+                            Projets
+                        </h2>
+                        <p class="h1" data-animate-el>
+                            Voici quelques-uns de mes projets récents. <br>
+                            N'hésitez pas à les découvrir.
+                        </p>
+    
+                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-03">
+                                    <div class="folio-list__item-pic">
+                                        <video src="images/portfolio/horizon.mp4" poster="images/portfolio/horizon.png"
+                                               autoplay muted loop playsinline></video>
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Web App
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Horizon
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : détection de cycles de dépendances par parcours de graphe (BFS), sans librairie externe.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Allan-ABATUCI/Horizon" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
+                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-01">
+                                    <div class="folio-list__item-pic">
+                                        <video src="images/portfolio/voronoi.mp4" poster="images/portfolio/voronoi.png"
+                                               autoplay muted loop playsinline></video>
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Application Python
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            QVoronoÏ
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : reconstruire un diagramme de Voronoï via la triangulation de Delaunay.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Yassafa/SAE_Voronoi_Q" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
+                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-02">
+                                    <div class="folio-list__item-pic folio-list__item-pic--portrait">
+                                        <video src="images/portfolio/vapeur.mp4" poster="images/portfolio/vapeur.jpg"
+                                               autoplay muted loop playsinline></video>
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Application mobile
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Vapeur
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : recommander des jeux par tags, 100% local, sans compte ni serveur.
+                                        </p>
+                                    </div>
+                                </a>
+                                <a class="folio-list__proj-link" href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
+                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                            <li class="folio-list__item column" data-animate-el>
+                                <a class="folio-list__item-link" href="#modal-04">
+                                    <div class="folio-list__item-pic folio-list__item-pic--text" aria-hidden="true">
+                                        <span>Homelab</span>
+                                    </div>
+
+                                    <div class="folio-list__item-text">
+                                        <div class="folio-list__item-cat">
+                                            Homelab
+                                        </div>
+                                        <div class="folio-list__item-title">
+                                            Serveur maison
+                                        </div>
+                                        <p class="folio-list__item-teaser">
+                                            Défi : exposer un service en sécurité sans ouvrir de port sur le routeur.
+                                        </p>
+                                    </div>
+                                </a>
+                            </li> <!--end folio-list__item -->
+
+                    </div> <!-- end column -->
+
+
+                    <!-- Modal Templates Popup
+                    -------------------------------------------- -->
+                    <div id="modal-01" hidden>
+                        <div class="modal-popup">
+                            <video src="images/portfolio/gallery/g-voronoi.mp4" poster="images/portfolio/gallery/g-voronoi.png"
+                                   autoplay muted loop playsinline></video>
+                            <p class="modal-popup__caption">Import d'un jeu de points : le diagramme est calculé et affiché à la volée.</p>
+
+                            <div class="modal-popup__desc">
+                                <h5>QVoronoÏ</h5>
+                                <p class="modal-popup__intro">Projet académique SAE, en équipe de 5 (Allan ABATUCI, Enrike CHAMPION, Ruben DUBORD, Yassine ESSAFA, Yanis NAÏT-MAKHLOUF) — 3 phases, 63 commits.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Construire, à partir d'un simple CSV de points du plan, un diagramme de Voronoï correct et vérifiable, puis l'exporter en SVG.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Le diagramme est reconstruit via une triangulation de Delaunay : chaque cellule de Voronoï est déduite des centres des cercles circonscrits aux triangles obtenus. L'ensemble est couvert par une suite de tests Pytest et accompagné d'une documentation technique HTML.</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une application Python qui importe un jeu de points, calcule et affiche le diagramme, puis l'exporte en SVG — testée et documentée.</p>
+
+                                <ul class="modal-popup__cat">
+                                    <li>Python</li>
+                                    <li>Delaunay</li>
+                                    <li>Pytest</li>
+                                </ul>
+
+                                <a href="#modal-02" class="modal-popup__next">Projet suivant : Vapeur →</a>
+                            </div>
+
+                            <a href="https://github.com/Yassafa/SAE_Voronoi_Q" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien du projet</a>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-02" hidden>
+                        <div class="modal-popup">
+                        <div class="modal-popup__phone-video">
+                            <video src="images/portfolio/gallery/g-vapeur.mp4" poster="images/portfolio/vapeur.jpg"
+                                   autoplay muted loop playsinline></video>
+                        </div>
+                            <p class="modal-popup__caption">Un like sur une recommandation : le compteur de jeux favoris se met à jour, entièrement en local.</p>
+
+                            <div class="modal-popup__desc">
+                                <h5>Vapeur</h5>
+                                <p class="modal-popup__intro">Projet académique SAE S5.01, même équipe de 5 — 151 commits.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Recommander des jeux vidéo par affinité de tags, sans compte utilisateur et sans dépendre d'un serveur distant.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Application mobile React Native avec stockage local (SQLite, AsyncStorage) : tout le filtrage et la recommandation s'exécutent sur l'appareil. Testée en conditions réelles via Expo Go (QR code).</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une appli de recommandation fonctionnelle et 100% locale, sans backend ni authentification à gérer.</p>
+
+                                <ul class="modal-popup__cat">
+                                    <li>React Native</li>
+                                    <li>SQLite</li>
+                                    <li>AsyncStorage</li>
+                                </ul>
+
+                                <a href="#modal-04" class="modal-popup__next">Projet suivant : Serveur maison →</a>
+                            </div>
+
+                            <a href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-03" hidden>
+                        <div class="modal-popup">
+                        <video src="images/portfolio/gallery/g-horizon.mp4" poster="images/portfolio/gallery/g-horizon.png"
+                               autoplay muted loop playsinline></video>
+                        <p class="modal-popup__caption">Kanban en action : déplacement d'une tâche entre colonnes, puis ouverture du détail.</p>
+
+                            <div class="modal-popup__desc">
+                                <h5>Horizon</h5>
+                                <p class="modal-popup__intro">Projet personnel solo, pour approfondir React et Laravel — actuellement en v1.1.0.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Concevoir un outil de gestion de projet complet (Kanban, calendrier, Gantt, dépendances entre tâches), déployé sur mon homelab, avec une architecture propre, sans dupliquer la logique entre un front et une API séparée.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Laravel 12 + Inertia.js + React 19 : les données transitent directement du contrôleur à la vue React, sans API REST intermédiaire, et toute l'autorisation passe par des Policies Laravel. Recherche plein texte via SQLite FTS5, détection de cycles de dépendances par parcours de graphe (BFS) écrit à la main, pièces jointes multiples (10 max, 2 Mo chacune) en stockage privé, visibilité par membre au niveau du projet, recherche globale (Cmd/Ctrl+K), rappels d'échéance planifiés.</p>
+                                <p>Durcissement sécurité : CSP à nonces, HSTS, X-Frame-Options, redirection HTTPS automatique derrière reverse proxy. Déploiement Docker multi-stage (build Node → PHP-FPM/nginx sur Alpine).</p>
+                                <p>Déploiement automatisé sur mon homelab : un workflow GitHub Actions lance les tests et des audits composer/npm à chaque push, puis un second workflow s'exécute sur un runner auto-hébergé pour reconstruire et relancer les conteneurs (<code>docker compose up --build --wait</code>), vérifier la santé de l'app (<code>/up</code>) et notifier le résultat sur Discord.</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une v1.1.0 fonctionnelle, avec compte et jeu de données de démonstration, entièrement en français — en ligne sur <a href="https://horizon.allanab.com" target="_blank" rel="noopener noreferrer">horizon.allanab.com</a>.</p>
+
+                                <ul class="modal-popup__cat">
+                                    <li>Laravel 12</li>
+                                    <li>Inertia.js</li>
+                                    <li>React 19</li>
+                                    <li>Docker</li>
+                                </ul>
+
+                                <a href="#modal-01" class="modal-popup__next">Projet suivant : QVoronoÏ →</a>
+                            </div>
+
+                            <div class="modal-popup__details-group">
+                                <a href="https://horizon.allanab.com" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Voir le site</a>
+                                <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                    <div id="modal-04" hidden>
+                        <div class="modal-popup">
+                        <div class="modal-popup__placeholder" role="img" aria-label="Capture d'écran à venir — serveur maison, Dell 4 Go de RAM sous Linux Server">
+                            <span class="modal-popup__placeholder-word">Homelab</span>
+                        </div>
+
+                            <div class="modal-popup__desc">
+                                <h5>Serveur maison</h5>
+                                <p class="modal-popup__intro">Projet personnel, pour héberger mes propres services sans dépendre du cloud.</p>
+
+                                <h6 class="modal-popup__section-title">Défi</h6>
+                                <p>Exposer un service web sur internet sans ouvrir de port sur mon routeur : un port ouvert directement expose le réseau domestique aux scans automatisés (effet honeypot) et demande une surveillance constante du trafic.</p>
+
+                                <h6 class="modal-popup__section-title">Approche</h6>
+                                <p>Un vieux portable Dell (4 Go de RAM) reconverti sous Linux Server fait office d'hôte. Le trafic passe par un tunnel Cloudflare plutôt que par une redirection de port : les requêtes transitent d'abord par les serveurs de Cloudflare avant d'atteindre la partie exposée du réseau, ce qui évite d'avoir à surveiller le trafic en continu. L'application (Horizon) tourne dans un conteneur Docker, à la fois pour une couche de sécurité supplémentaire et pour simplifier le déploiement.</p>
+                                <p>Le déploiement est automatisé via GitHub Actions : un workflow lance les tests, puis un second s'exécute sur un runner auto-hébergé pour reconstruire les conteneurs et vérifier que l'app répond avant de considérer le déploiement réussi. Le monitoring est assuré par Grafana, avec des alertes envoyées directement sur Discord via webhook.</p>
+
+                                <h6 class="modal-popup__section-title">Résultat</h6>
+                                <p>Une infrastructure personnelle qui héberge <a href="https://horizon.allanab.com" target="_blank" rel="noopener noreferrer">Horizon</a> en continu, mise à jour automatiquement, surveillée sans intervention manuelle, sans coût d'hébergement cloud et sans exposer directement le réseau domestique.</p>
+
+                                <ul class="modal-popup__cat">
+                                    <li>Docker</li>
+                                    <li>Cloudflare Tunnel</li>
+                                    <li>GitHub Actions</li>
+                                    <li>Grafana</li>
+                                </ul>
+
+                                <a href="#modal-03" class="modal-popup__next">Projet suivant : Horizon →</a>
+                            </div>
+                        </div>
+                    </div> <!-- end modal -->
+
+                </div> <!-- end works-portfolio -->
+
+            </section> <!-- end s-works -->
 
 
             <!-- ### about
@@ -385,271 +650,6 @@
                 </div> <!-- end about-timelines -->
 
             </section> <!-- end s-about -->
-
-
-            <!-- ### works
-            ================================================== -->
-            <section id="works" class="s-works target-section">
-
-                <div class="circles" aria-hidden="true">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-
-
-                <div class="row works-portfolio">
-
-                    <div class="column lg-12" data-animate-block>
-
-                        <h2 class="text-pretitle" data-animate-el>
-                            Projets
-                        </h2>
-                        <p class="h1" data-animate-el>
-                            Voici quelques-uns de mes projets récents. <br>
-                            N'hésitez pas à les découvrir.
-                        </p>
-    
-                        <ul class="folio-list row block-lg-one-half block-stack-on-1000">
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-03">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/horizon.png"
-                                             srcset="images/portfolio/horizon.png 1x, images/portfolio/horizon@2x.png 2x" alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Web App
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Horizon
-                                        </div>
-                                        <p class="folio-list__item-teaser">
-                                            Défi : détection de cycles de dépendances par parcours de graphe (BFS), sans librairie externe.
-                                        </p>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Allan-ABATUCI/Horizon" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
-                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-01">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/voronoi.png"
-                                             srcset="images/portfolio/voronoi.png 1x, images/portfolio/voronoi@2x.png 2x"  alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Application Python
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            QVoronoÏ
-                                        </div>
-                                        <p class="folio-list__item-teaser">
-                                            Défi : reconstruire un diagramme de Voronoï via la triangulation de Delaunay.
-                                        </p>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Yassafa/SAE_Voronoi_Q" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
-                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-02">
-                                    <div class="folio-list__item-pic">
-                                        <img src="images/portfolio/vapeur.jpg"
-                                             srcset="images/portfolio/vapeur.jpg 1x" alt="">
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Application mobile
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Vapeur
-                                        </div>
-                                        <p class="folio-list__item-teaser">
-                                            Défi : recommander des jeux par tags, 100% local, sans compte ni serveur.
-                                        </p>
-                                    </div>
-                                </a>
-                                <a class="folio-list__proj-link" href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" title="Voir le dépôt sur GitHub" target="_blank" rel="noopener noreferrer">
-                                    <span class="folio-list__proj-link-arrow" aria-hidden="true">↗</span>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                            <li class="folio-list__item column" data-animate-el>
-                                <a class="folio-list__item-link" href="#modal-04">
-                                    <div class="folio-list__item-pic folio-list__item-pic--text" aria-hidden="true">
-                                        <span>Homelab</span>
-                                    </div>
-
-                                    <div class="folio-list__item-text">
-                                        <div class="folio-list__item-cat">
-                                            Homelab
-                                        </div>
-                                        <div class="folio-list__item-title">
-                                            Serveur maison
-                                        </div>
-                                        <p class="folio-list__item-teaser">
-                                            Défi : exposer un service en sécurité sans ouvrir de port sur le routeur.
-                                        </p>
-                                    </div>
-                                </a>
-                            </li> <!--end folio-list__item -->
-
-                    </div> <!-- end column -->
-
-
-                    <!-- Modal Templates Popup
-                    -------------------------------------------- -->
-                    <div id="modal-01" hidden>
-                        <div class="modal-popup">
-                            <img src="images/portfolio/gallery/g-voronoi.png"
-                                 alt="Interface QVoronoÏ affichant un diagramme de Voronoï calculé à partir d'un jeu de points.">
-                            <p class="modal-popup__caption">Chaque cellule est déduite des centres des cercles circonscrits obtenus par triangulation de Delaunay.</p>
-
-                            <div class="modal-popup__desc">
-                                <h5>QVoronoÏ</h5>
-                                <p class="modal-popup__intro">Projet académique SAE, en équipe de 5 (Allan ABATUCI, Enrike CHAMPION, Ruben DUBORD, Yassine ESSAFA, Yanis NAÏT-MAKHLOUF) — 3 phases, 63 commits.</p>
-
-                                <h6 class="modal-popup__section-title">Défi</h6>
-                                <p>Construire, à partir d'un simple CSV de points du plan, un diagramme de Voronoï correct et vérifiable, puis l'exporter en SVG.</p>
-
-                                <h6 class="modal-popup__section-title">Approche</h6>
-                                <p>Le diagramme est reconstruit via une triangulation de Delaunay : chaque cellule de Voronoï est déduite des centres des cercles circonscrits aux triangles obtenus. L'ensemble est couvert par une suite de tests Pytest et accompagné d'une documentation technique HTML.</p>
-
-                                <h6 class="modal-popup__section-title">Résultat</h6>
-                                <p>Une application Python qui importe un jeu de points, calcule et affiche le diagramme, puis l'exporte en SVG — testée et documentée.</p>
-
-                                <ul class="modal-popup__cat">
-                                    <li>Python</li>
-                                    <li>Delaunay</li>
-                                    <li>Pytest</li>
-                                </ul>
-
-                                <a href="#modal-02" class="modal-popup__next">Projet suivant : Vapeur →</a>
-                            </div>
-
-                            <a href="https://github.com/Yassafa/SAE_Voronoi_Q" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien du projet</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-02" hidden>
-                        <div class="modal-popup">
-                        <iframe width="100%" height="560" src="https://www.youtube-nocookie.com/embed/43xaoQmxL8Q" title="Démo vidéo de l'application Vapeur"
-                            frameborder="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
-                            allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                            <p class="modal-popup__caption">Filtrage par tags et recommandation calculés entièrement sur l'appareil, sans backend.</p>
-
-                            <div class="modal-popup__desc">
-                                <h5>Vapeur</h5>
-                                <p class="modal-popup__intro">Projet académique SAE S5.01, même équipe de 5 — 151 commits.</p>
-
-                                <h6 class="modal-popup__section-title">Défi</h6>
-                                <p>Recommander des jeux vidéo par affinité de tags, sans compte utilisateur et sans dépendre d'un serveur distant.</p>
-
-                                <h6 class="modal-popup__section-title">Approche</h6>
-                                <p>Application mobile React Native avec stockage local (SQLite, AsyncStorage) : tout le filtrage et la recommandation s'exécutent sur l'appareil. Testée en conditions réelles via Expo Go (QR code).</p>
-
-                                <h6 class="modal-popup__section-title">Résultat</h6>
-                                <p>Une appli de recommandation fonctionnelle et 100% locale, sans backend ni authentification à gérer.</p>
-
-                                <ul class="modal-popup__cat">
-                                    <li>React Native</li>
-                                    <li>SQLite</li>
-                                    <li>AsyncStorage</li>
-                                </ul>
-
-                                <a href="#modal-04" class="modal-popup__next">Projet suivant : Serveur maison →</a>
-                            </div>
-
-                            <a href="https://github.com/Ruben-Dubord/S501-Groupe-Silksong-Projet-Vapeur" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-03" hidden>
-                        <div class="modal-popup">
-                        <img src="images/portfolio/gallery/g-horizon.png"
-                             alt="Tableau de bord Horizon : vue Kanban des tâches, avec statuts, assignés et échéances.">
-                        <p class="modal-popup__caption">Vue Kanban du tableau de bord, avec le jeu de données de démonstration.</p>
-
-                            <div class="modal-popup__desc">
-                                <h5>Horizon</h5>
-                                <p class="modal-popup__intro">Projet personnel solo, pour approfondir React et Laravel — actuellement en v1.1.0.</p>
-
-                                <h6 class="modal-popup__section-title">Défi</h6>
-                                <p>Concevoir un outil de gestion de projet complet (Kanban, calendrier, Gantt, dépendances entre tâches), déployé sur mon homelab, avec une architecture propre, sans dupliquer la logique entre un front et une API séparée.</p>
-
-                                <h6 class="modal-popup__section-title">Approche</h6>
-                                <p>Laravel 12 + Inertia.js + React 19 : les données transitent directement du contrôleur à la vue React, sans API REST intermédiaire, et toute l'autorisation passe par des Policies Laravel. Recherche plein texte via SQLite FTS5, détection de cycles de dépendances par parcours de graphe (BFS) écrit à la main, pièces jointes multiples (10 max, 2 Mo chacune) en stockage privé, visibilité par membre au niveau du projet, recherche globale (Cmd/Ctrl+K), rappels d'échéance planifiés.</p>
-                                <p>Durcissement sécurité : CSP à nonces, HSTS, X-Frame-Options, redirection HTTPS automatique derrière reverse proxy. Déploiement Docker multi-stage (build Node → PHP-FPM/nginx sur Alpine).</p>
-                                <p>Déploiement automatisé sur mon homelab : un workflow GitHub Actions lance les tests et des audits composer/npm à chaque push, puis un second workflow s'exécute sur un runner auto-hébergé pour reconstruire et relancer les conteneurs (<code>docker compose up --build --wait</code>), vérifier la santé de l'app (<code>/up</code>) et notifier le résultat sur Discord.</p>
-
-                                <h6 class="modal-popup__section-title">Résultat</h6>
-                                <p>Une v1.1.0 fonctionnelle, avec compte et jeu de données de démonstration, entièrement en français — en ligne sur <a href="https://horizon.allanab.com" target="_blank" rel="noopener noreferrer">horizon.allanab.com</a>.</p>
-
-                                <ul class="modal-popup__cat">
-                                    <li>Laravel 12</li>
-                                    <li>Inertia.js</li>
-                                    <li>React 19</li>
-                                    <li>Docker</li>
-                                </ul>
-
-                                <a href="#modal-01" class="modal-popup__next">Projet suivant : QVoronoÏ →</a>
-                            </div>
-
-                            <div class="modal-popup__details-group">
-                                <a href="https://horizon.allanab.com" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Voir le site</a>
-                                <a href="https://github.com/Allan-ABATUCI/Horizon" class="modal-popup__details" target="_blank" rel="noopener noreferrer">Lien projet</a>
-                            </div>
-                        </div>
-                    </div> <!-- end modal -->
-
-                    <div id="modal-04" hidden>
-                        <div class="modal-popup">
-                        <div class="modal-popup__placeholder" role="img" aria-label="Capture d'écran à venir — serveur maison, Dell 4 Go de RAM sous Linux Server">
-                            <span class="modal-popup__placeholder-word">Homelab</span>
-                        </div>
-
-                            <div class="modal-popup__desc">
-                                <h5>Serveur maison</h5>
-                                <p class="modal-popup__intro">Projet personnel, pour héberger mes propres services sans dépendre du cloud.</p>
-
-                                <h6 class="modal-popup__section-title">Défi</h6>
-                                <p>Exposer un service web sur internet sans ouvrir de port sur mon routeur : un port ouvert directement expose le réseau domestique aux scans automatisés (effet honeypot) et demande une surveillance constante du trafic.</p>
-
-                                <h6 class="modal-popup__section-title">Approche</h6>
-                                <p>Un vieux portable Dell (4 Go de RAM) reconverti sous Linux Server fait office d'hôte. Le trafic passe par un tunnel Cloudflare plutôt que par une redirection de port : les requêtes transitent d'abord par les serveurs de Cloudflare avant d'atteindre la partie exposée du réseau, ce qui évite d'avoir à surveiller le trafic en continu. L'application (Horizon) tourne dans un conteneur Docker, à la fois pour une couche de sécurité supplémentaire et pour simplifier le déploiement.</p>
-                                <p>Le déploiement est automatisé via GitHub Actions : un workflow lance les tests, puis un second s'exécute sur un runner auto-hébergé pour reconstruire les conteneurs et vérifier que l'app répond avant de considérer le déploiement réussi. Le monitoring est assuré par Grafana, avec des alertes envoyées directement sur Discord via webhook.</p>
-
-                                <h6 class="modal-popup__section-title">Résultat</h6>
-                                <p>Une infrastructure personnelle qui héberge <a href="https://horizon.allanab.com" target="_blank" rel="noopener noreferrer">Horizon</a> en continu, mise à jour automatiquement, surveillée sans intervention manuelle, sans coût d'hébergement cloud et sans exposer directement le réseau domestique.</p>
-
-                                <ul class="modal-popup__cat">
-                                    <li>Docker</li>
-                                    <li>Cloudflare Tunnel</li>
-                                    <li>GitHub Actions</li>
-                                    <li>Grafana</li>
-                                </ul>
-
-                                <a href="#modal-03" class="modal-popup__next">Projet suivant : Horizon →</a>
-                            </div>
-                        </div>
-                    </div> <!-- end modal -->
-
-                </div> <!-- end works-portfolio -->
-
-            </section> <!-- end s-works -->
 
 
             <!-- ### contact
